@@ -26,6 +26,9 @@ jobs:
       run: |
         poetry install
     - name: Test with pytest
+      env:
+        TAP_PLANETSCALEAPI_SERVICE_TOKEN_ID: ${{ secrets.TAP_PLANETSCALEAPI_SERVICE_TOKEN_ID }}
+        TAP_PLANETSCALEAPI_SERVICE_TOKEN: ${{ secrets.TAP_PLANETSCALEAPI_SERVICE_TOKEN }}
       run: |
         poetry run pytest
     - name: Static type checking
