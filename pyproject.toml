@@ -88,6 +88,7 @@ filterwarnings = [
     "ignore:No records returned in stream:UserWarning",
     "ignore:No records were available to test:UserWarning",
     # https://github.com/requests-cache/requests-cache/issues/845
-    "ignore:datetime.datetime.utcnow() is deprecated:DeprecationWarning:requests_cache.models.response",
+    # https://github.com/requests-cache/requests-cache/pull/864
+    "ignore:datetime.datetime.utcnow:DeprecationWarning:requests_cache.models.response",
 ]
 xfail_strict = true
