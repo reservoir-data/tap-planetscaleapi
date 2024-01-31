@@ -36,4 +36,3 @@ def pytest_runtest_setup(item: pytest.Item) -> None:
 
     if test_name in SCHEMA_MISMATCH:
         item.add_marker(XFAIL_SCHEMA_MISMATCH)
-
