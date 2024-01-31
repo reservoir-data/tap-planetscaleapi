@@ -30,6 +30,7 @@ toolz = "~=0.12.1"
 [tool.poetry.group.dev.dependencies]
 mypy = "~=1.8.0"
 pytest = ">=7.4.0"
+requests-cache = {version = "~=1.1.1", python = "<4.0"}
 singer-sdk = { version="~=0.35.0a4", extras = ["testing"] }
 types-requests = "~=2.31.0.6"
 
@@ -79,3 +80,11 @@ tap-planetscaleapi = 'tap_planetscaleapi.tap:TapPlanetScaleAPI.cli'
 [tool.poetry-dynamic-versioning]
 enable = true
 style = "pep440"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "default:Fields in transformed catalog but not in records:UserWarning",
+    "ignore:No records returned in stream:UserWarning",
+    "ignore:No records were available to test:UserWarning",
+]
