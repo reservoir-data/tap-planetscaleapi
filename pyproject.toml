@@ -88,3 +88,4 @@ filterwarnings = [
     "ignore:No records returned in stream:UserWarning",
     "ignore:No records were available to test:UserWarning",
 ]
+xfail_strict = true
