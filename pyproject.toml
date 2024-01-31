@@ -87,5 +87,7 @@ filterwarnings = [
     "default:Fields in transformed catalog but not in records:UserWarning",
     "ignore:No records returned in stream:UserWarning",
     "ignore:No records were available to test:UserWarning",
+    # https://github.com/requests-cache/requests-cache/issues/845
+    "ignore:datetime.datetime.utcnow() is deprecated:DeprecationWarning:requests_cache.models.response",
 ]
 xfail_strict = true
