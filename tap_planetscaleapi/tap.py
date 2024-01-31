@@ -25,7 +25,7 @@ STREAMS = [
     streams.DeployRequestsStream,
     streams.DeployOperationsStream,
     streams.DeployRequestReviewsStreams,
-    streams.OAuthApplicationsStream,
+    # streams.OAuthApplicationsStream,
     streams.RegionsStream,
 ]
 
