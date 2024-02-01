@@ -1,4 +1,24 @@
+<div align="center">
+
 # tap-planetscaleapi
+
+<div>
+  <a href="https://pypi.org/p/tap-planetscaleapi/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/tap-planetscaleapi">
+  </a>
+  <a href="https://results.pre-commit.ci/latest/github/edgarrmondragon/tap-planetscaleapi/main">
+    <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/edgarrmondragon/tap-planetscaleapi/main.svg"/>
+  </a>
+  <a href="https://github.com/edgarrmondragon/tap-planetscaleapi/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/edgarrmondragon/tap-planetscaleapi"/>
+  </a>
+  <a href="https://github.com/astral-sh/ruff">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="Ruff" style="max-width:100%;">
+  </a>
+  <a href="https://pypi.org/p/tap-planetscaleapi/">
+    <img alt="Python versions" src="https://img.shields.io/pypi/pyversions/tap-planetscaleapi"/>
+  </a>
+</div>
 
 `tap-planetscaleapi` is a Singer tap for [PlanetScale API](https://api-docs.planetscale.com/reference/getting-started-with-planetscale-api).
 

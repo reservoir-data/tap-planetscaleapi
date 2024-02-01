@@ -19,6 +19,11 @@ classifiers = [
 ]
 license = "Apache-2.0"
 
+[tool.poetry.urls]
+homepage = "https://github.com/edgarrmondragon/tap-planetscalepi"
+documentation = "https://github.com/edgarrmondragon/tap-planetscalepi"
+"Issue Tracker" = "https://github.com/edgarrmondragon/tap-planetscalepi/issues"
+
 [tool.poetry.dependencies]
 python = ">=3.8"
 importlib-resources = { version = "==6.1.*", python = "<3.9" }
