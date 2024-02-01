@@ -24,6 +24,8 @@
 
 Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
+</div>
+
 ## Installation
 
 Install from PyPi:
