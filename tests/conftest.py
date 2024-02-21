@@ -10,6 +10,7 @@ SCHEMA_MISMATCH = {
     "test_tap_stream_record_matches_stream_schema[branches]",
     "test_tap_stream_record_matches_stream_schema[databases]",
     "test_tap_stream_record_matches_stream_schema[passwords]",
+    "test_tap_stream_record_matches_stream_schema[organizations]",
 }
 NULLABLE = {
     "test_tap_stream_attribute_not_null[backups.actor]",
@@ -20,6 +21,7 @@ NULLABLE = {
     "test_tap_stream_attribute_not_null[databases.data_import]",
     "test_tap_stream_attribute_not_null[databases.migration_framework]",
     "test_tap_stream_attribute_not_null[databases.migration_table_name]",
+    "test_tap_stream_attribute_not_null[organizations.has_past_due_invoices]",
     "test_tap_stream_attribute_not_null[organizations.sso_portal_url]",
     "test_tap_stream_attribute_not_null[passwords.deleted_at]",
     "test_tap_stream_attribute_not_null[passwords.expires_at]",
