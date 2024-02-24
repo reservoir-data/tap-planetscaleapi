@@ -53,7 +53,6 @@ module = [
 
 [tool.ruff]
 src = ["tap_planetscaleapi"]
-target-version = "py38"
 
 [tool.ruff.lint]
 ignore = [
