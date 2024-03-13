@@ -39,6 +39,10 @@ class OrganizationsStream(PlanetScaleAPIStream):
             "organization_name": record["name"],
         }
 
+    def post_process(self, row: dict, context: dict | None = None) -> dict | None:  # noqa: D102, ARG002
+        row["invoice_budget_amount"] = float(row["invoice_budget_amount"])
+        return row
+
 
 class OrganizationRegionsStream(PlanetScaleAPIStream):
     """Organization regions."""
