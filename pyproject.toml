@@ -25,7 +25,7 @@ urls.repository = "https://github.com/edgarrmondragon/tap-planetscalepi"
 
 [tool.poetry.dependencies]
 python = ">=3.8"
-importlib-resources = { version = "==6.1.*", python = "<3.9" }
+importlib-resources = { version = "==6.4.*", python = "<3.9" }
 fs-s3fs = { version = "~=1.1.1", optional = true }
 singer-sdk = "~=0.37.0"
 requests = "~=2.31.0"
