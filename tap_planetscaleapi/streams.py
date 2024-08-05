@@ -2,7 +2,12 @@
 
 from __future__ import annotations
 
+import typing as t
+
 from tap_planetscaleapi.client import PlanetScaleAPIStream
+
+if t.TYPE_CHECKING:
+    from singer_sdk.helpers.types import Context
 
 
 class OrganizationsStream(PlanetScaleAPIStream):
@@ -24,7 +29,7 @@ class OrganizationsStream(PlanetScaleAPIStream):
         "items",
     )
 
-    def get_child_context(self, record: dict, context: dict | None) -> dict | None:  # noqa: ARG002
+    def get_child_context(self, record: dict, context: Context | None) -> dict | None:  # noqa: ARG002
         """Return a dictionary of child context.
 
         Args:
@@ -39,7 +44,7 @@ class OrganizationsStream(PlanetScaleAPIStream):
             "organization_name": record["name"],
         }
 
-    def post_process(self, row: dict, context: dict | None = None) -> dict | None:  # noqa: D102, ARG002
+    def post_process(self, row: dict, context: Context | None = None) -> dict | None:  # noqa: D102, ARG002
         row["invoice_budget_amount"] = float(row["invoice_budget_amount"])
         return row
 
@@ -87,7 +92,7 @@ class DatabasesStream(PlanetScaleAPIStream):
         "items",
     )
 
-    def get_child_context(self, record: dict, context: dict | None) -> dict | None:
+    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
         """Return a dictionary of child context.
 
         Args:
@@ -170,7 +175,7 @@ class BranchesStream(PlanetScaleAPIStream):
         "items",
     )
 
-    def get_child_context(self, record: dict, context: dict | None) -> dict | None:
+    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
         """Return a dictionary of child context.
 
         Args:
@@ -277,7 +282,7 @@ class DeployRequestsStream(PlanetScaleAPIStream):
         "items",
     )
 
-    def get_child_context(self, record: dict, context: dict | None) -> dict | None:
+    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
         """Return a dictionary of child context.
 
         Args:
