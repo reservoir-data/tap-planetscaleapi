@@ -9,6 +9,9 @@ from singer_sdk.authenticators import APIKeyAuthenticator
 from singer_sdk.pagination import BasePageNumberPaginator
 from singer_sdk.streams import RESTStream
 
+if t.TYPE_CHECKING:
+    from singer_sdk.helpers.types import Context
+
 _Auth = t.Callable[[requests.PreparedRequest], requests.PreparedRequest]
 
 
@@ -64,7 +67,7 @@ class PlanetScaleAPIStream(RESTStream[int]):
 
     def get_url_params(
         self,
-        context: dict | None,  # noqa: ARG002
+        context: Context | None,  # noqa: ARG002
         next_page_token: t.Any | None,  # noqa: ANN401
     ) -> dict[str, t.Any]:
         """Return a dictionary of values to be used in URL parameterization.
