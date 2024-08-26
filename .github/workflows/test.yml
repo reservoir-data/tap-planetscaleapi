@@ -1,13 +1,29 @@
 ### A CI workflow template that runs linting and python testing
-### TODO: Modify as needed or as desired.
 
 name: Test tap-planetscaleapi
 
 on:
   push:
     branches: [main]
+    paths:
+    - .github/workflows/test.yml
+    - tap_planetscaleapi/**
+    - tests/**
+    - poetry.lock
+    - pyproject.toml
+    - tox.ini
   pull_request:
     branches: [main]
+    paths:
+    - .github/workflows/test.yml
+    - tap_planetscaleapi/**
+    - tests/**
+    - poetry.lock
+    - pyproject.toml
+    - tox.ini
+  schedule:
+  - cron: "0 10 * * *"
+  workflow_dispatch:
 
 jobs:
   pytest:
