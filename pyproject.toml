@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "tap-planetscaleapi"
 version = "0.0.0"
-description = "`tap-planetscaleapi` is a Singer tap for PlanetScaleAPI, built with the Meltano Singer SDK."
+description = "Singer tap for PlanetScaleAPI, built with the Meltano Singer SDK."
 readme = "README.md"
 authors = ["Edgar Ramírez-Mondragón <edgarrm358@gmail.com>"]
 keywords = [
@@ -43,7 +43,7 @@ types-requests = "~=2.31.0.6"
 s3 = ["fs-s3fs"]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 warn_unused_configs = true
 
 [[tool.mypy.overrides]]
@@ -54,7 +54,6 @@ module = [
 
 [tool.ruff]
 src = ["tap_planetscaleapi"]
-target-version = "py38"
 
 [tool.ruff.lint]
 ignore = [
@@ -75,7 +74,7 @@ known-first-party = ["tap_planetscaleapi"]
 convention = "google"
 
 [build-system]
-requires = ["poetry-core==1.8.1", "poetry-dynamic-versioning==1.2.0"]
+requires = ["poetry-core==1.9", "poetry-dynamic-versioning==1.4.0"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.scripts]
