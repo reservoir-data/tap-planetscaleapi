@@ -43,7 +43,6 @@ types-requests = "~=2.31.0.6"
 s3 = ["fs-s3fs"]
 
 [tool.mypy]
-python_version = "3.12"
 warn_unused_configs = true
 
 [[tool.mypy.overrides]]
@@ -74,7 +73,7 @@ known-first-party = ["tap_planetscaleapi"]
 convention = "google"
 
 [build-system]
-requires = ["poetry-core==1.9.1", "poetry-dynamic-versioning==1.4.1"]
+requires = ["poetry-core", "poetry-dynamic-versioning"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.scripts]
