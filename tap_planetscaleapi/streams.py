@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import functools
 import typing as t
 
 from tap_planetscaleapi.client import PlanetScaleAPIStream
@@ -259,6 +260,13 @@ class PasswordsStream(PlanetScaleAPIStream):
         "data",
         "items",
     )
+
+    @functools.cached_property
+    def schema(self) -> dict[str, t.Any]:
+        """Patch the stream schema."""
+        schema = super().schema
+        schema["properties"]["cidrs"]["type"] = ["array", "null"]
+        return schema
 
 
 class DeployRequestsStream(PlanetScaleAPIStream):
