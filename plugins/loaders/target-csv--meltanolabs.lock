@@ -23,7 +23,13 @@
       "name": "add_record_metadata",
       "kind": "boolean",
       "label": "Add Record Metadata",
-      "description": "Add metadata to records."
+      "description": "Whether to add metadata fields to records."
+    },
+    {
+      "name": "batch_size_rows",
+      "kind": "integer",
+      "label": "Batch Size Rows",
+      "description": "Maximum number of rows in each batch."
     },
     {
       "name": "datestamp_format",
@@ -45,6 +51,18 @@
       "description": "The character to use for escaping special characters."
     },
     {
+      "name": "faker_config.locale",
+      "kind": "array",
+      "label": "Faker Locale",
+      "description": "One or more LCID locale strings to produce localized output for: https://faker.readthedocs.io/en/master/#localization"
+    },
+    {
+      "name": "faker_config.seed",
+      "kind": "string",
+      "label": "Faker Seed",
+      "description": "Value to seed the Faker generator for deterministic output: https://faker.readthedocs.io/en/master/#seeding-the-generator"
+    },
+    {
       "name": "file_naming_scheme",
       "kind": "string",
       "value": "{stream_name}.csv",
@@ -54,13 +72,13 @@
     {
       "name": "flattening_enabled",
       "kind": "boolean",
-      "label": "Flattening Enabled",
+      "label": "Enable Schema Flattening",
       "description": "'True' to enable schema flattening and automatically expand nested properties."
     },
     {
       "name": "flattening_max_depth",
       "kind": "integer",
-      "label": "Flattening Max Depth",
+      "label": "Max Flattening Depth",
       "description": "The max depth to flatten schemas."
     },
     {
@@ -112,7 +130,7 @@
     {
       "name": "stream_map_config",
       "kind": "object",
-      "label": "Stream Map Config",
+      "label": "User Stream Map Configuration",
       "description": "User-defined config values to be used within map expressions."
     },
     {
@@ -134,6 +152,13 @@
       "value": "UTC",
       "label": "Timestamp Timezone",
       "description": "The timezone code or name to use when generating `{timestamp}` and `{datestamp}`. Defaults to 'UTC'. For a list of possible values, please see: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+    },
+    {
+      "name": "validate_records",
+      "kind": "boolean",
+      "value": true,
+      "label": "Validate Records",
+      "description": "Whether to validate the schema of the incoming streams."
     }
   ]
 }
