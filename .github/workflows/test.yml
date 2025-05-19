@@ -9,18 +9,18 @@ on:
     - .github/workflows/test.yml
     - tap_planetscaleapi/**
     - tests/**
-    - poetry.lock
     - pyproject.toml
     - tox.ini
+    - uv.lock
   pull_request:
     branches: [main]
     paths:
     - .github/workflows/test.yml
     - tap_planetscaleapi/**
     - tests/**
-    - poetry.lock
     - pyproject.toml
     - tox.ini
+    - uv.lock
   schedule:
   - cron: "0 10 * * *"
   workflow_dispatch:
@@ -46,18 +46,16 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         allow-prereleases: true
-    - name: Install Poetry
-      run: |
-        pip install poetry
-    - name: Install dependencies
-      run: |
-        poetry install
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
+      with:
+        version: "latest"
     - name: Test with pytest
       env:
         TAP_PLANETSCALEAPI_SERVICE_TOKEN_ID: ${{ secrets.TAP_PLANETSCALEAPI_SERVICE_TOKEN_ID }}
         TAP_PLANETSCALEAPI_SERVICE_TOKEN: ${{ secrets.TAP_PLANETSCALEAPI_SERVICE_TOKEN }}
       run: |
-        poetry run pytest
+        uv run pytest
     - name: Static type checking
       run: |
-        poetry run mypy tap_planetscaleapi
+        uv run mypy tap_planetscaleapi
