@@ -1,9 +1,11 @@
-[tool.poetry]
+[project]
 name = "tap-planetscaleapi"
 version = "0.0.0"
 description = "Singer tap for PlanetScaleAPI, built with the Meltano Singer SDK."
+authors = [{ name = "Edgar Ramírez-Mondragón", email = "edgarrm358@gmail.com" }]
+requires-python = ">=3.9"
 readme = "README.md"
-authors = ["Edgar Ramírez-Mondragón <edgarrm358@gmail.com>"]
+license = "Apache-2.0"
 keywords = [
     "ELT",
     "PlanetScaleAPI",
@@ -17,28 +19,32 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
-license = "Apache-2.0"
-urls.Homepage = "https://github.com/edgarrmondragon/tap-planetscalepi"
-urls.Documentation = "https://github.com/edgarrmondragon/tap-planetscalepi#"
-urls."Issue Tracker" = "https://github.com/edgarrmondragon/tap-planetscalepi/issues"
-urls.Repository = "https://github.com/edgarrmondragon/tap-planetscalepi"
+dependencies = [
+    "singer-sdk~=0.46.0",
+    "requests~=2.32.0",
+    "toolz~=1.0.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9"
-fs-s3fs = { version = "~=1.1.1", optional = true }
-singer-sdk = "~=0.46.0"
-requests = "~=2.32.0"
-toolz = "~=1.0.0"
+[project.optional-dependencies]
+s3 = ["fs-s3fs~=1.1.1"]
 
-[tool.poetry.group.dev.dependencies]
-mypy = "~=1.15.0"
-pytest = ">=7.4.0"
-requests-cache = ">=1.1.1,<1.3.0"
-singer-sdk = { version = "~=0.46.0", extras = ["testing"] }
-types-requests = "~=2.31.0.6"
+[project.urls]
+Homepage = "https://github.com/edgarrmondragon/tap-planetscalepi"
+Documentation = "https://github.com/edgarrmondragon/tap-planetscalepi#"
+"Issue Tracker" = "https://github.com/edgarrmondragon/tap-planetscalepi/issues"
+Repository = "https://github.com/edgarrmondragon/tap-planetscalepi"
 
-[tool.poetry.extras]
-s3 = ["fs-s3fs"]
+[project.scripts]
+tap-planetscaleapi = "tap_planetscaleapi.tap:TapPlanetScaleAPI.cli"
+
+[dependency-groups]
+dev = [
+    "mypy~=1.15.0",
+    "pytest>=7.4.0",
+    "requests-cache>=1.1.1,<1.3.0",
+    "singer-sdk[testing]~=0.46.0",
+    "types-requests~=2.31.0.6",
+]
 
 [tool.mypy]
 warn_unused_configs = true
@@ -71,10 +77,6 @@ convention = "google"
 [build-system]
 requires = ["poetry-core", "poetry-dynamic-versioning"]
 build-backend = "poetry_dynamic_versioning.backend"
-
-[tool.poetry.scripts]
-# CLI declaration
-tap-planetscaleapi = 'tap_planetscaleapi.tap:TapPlanetScaleAPI.cli'
 
 [tool.poetry-dynamic-versioning]
 enable = true
