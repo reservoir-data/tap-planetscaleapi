@@ -72,6 +72,7 @@ A full list of supported settings and capabilities is available by running: `tap
 * 3.11
 * 3.12
 * 3.13
+* 3.14
 
 A full list of supported settings and capabilities for this tap is available by running:
 
