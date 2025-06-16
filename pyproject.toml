@@ -1,6 +1,8 @@
 [project]
 name = "tap-planetscaleapi"
-version = "0.0.0"
+dynamic = [
+    "version",
+]
 description = "Singer tap for PlanetScaleAPI, built with the Meltano Singer SDK."
 authors = [{ name = "Edgar Ramírez-Mondragón", email = "edgarrm358@gmail.com" }]
 requires-python = ">=3.9"
@@ -76,12 +78,11 @@ known-first-party = ["tap_planetscaleapi"]
 convention = "google"
 
 [build-system]
-requires = ["poetry-core", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
-
-[tool.poetry-dynamic-versioning]
-enable = true
-style = "pep440"
+requires = [
+    "hatchling==1.27",
+    "hatch-vcs==0.5",
+]
+build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 filterwarnings = [
@@ -93,3 +94,7 @@ filterwarnings = [
     "default:'_UnionGenericAlias' is deprecated and slated for removal in Python 3.17:DeprecationWarning",
 ]
 xfail_strict = true
+
+[tool.hatch.version]
+fallback-version = "0.0.0"
+source = "vcs"

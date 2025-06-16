@@ -1462,7 +1462,6 @@ wheels = [
 
 [[package]]
 name = "tap-planetscaleapi"
-version = "0.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "requests" },
