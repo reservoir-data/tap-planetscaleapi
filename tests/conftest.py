@@ -14,6 +14,8 @@ SCHEMA_MISMATCH = {
 }
 NULLABLE = {
     "test_tap_stream_attribute_not_null[backups.actor]",
+    "test_tap_stream_attribute_not_null[branches.cluster_iops]",
+    "test_tap_stream_attribute_not_null[branches.deleted_at]",
     "test_tap_stream_attribute_not_null[branches.parent_branch]",
     "test_tap_stream_attribute_not_null[branches.restore_checklist_completed_at]",
     "test_tap_stream_attribute_not_null[databases.automatic_migrations]",
@@ -23,8 +25,10 @@ NULLABLE = {
     "test_tap_stream_attribute_not_null[databases.migration_table_name]",
     "test_tap_stream_attribute_not_null[organizations.has_past_due_invoices]",
     "test_tap_stream_attribute_not_null[organizations.sso_portal_url]",
+    "test_tap_stream_attribute_not_null[passwords.cidrs]",
     "test_tap_stream_attribute_not_null[passwords.deleted_at]",
     "test_tap_stream_attribute_not_null[passwords.expires_at]",
+    "test_tap_stream_attribute_not_null[passwords.plain_text]",
     "test_tap_stream_attribute_not_null[passwords.ttl_seconds]",
 }
 

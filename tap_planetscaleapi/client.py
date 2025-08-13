@@ -2,41 +2,96 @@
 
 from __future__ import annotations
 
+import abc
+import sys
 import typing as t
 
-import requests
+from singer_sdk import OpenAPISchema, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
 from singer_sdk.pagination import BasePageNumberPaginator
 from singer_sdk.streams import RESTStream
+from toolz.dicttoolz import get_in
+
+if sys.version_info >= (3, 12):
+    from typing import override
+else:
+    from typing_extensions import override
 
 if t.TYPE_CHECKING:
     from singer_sdk.helpers.types import Context
 
-_Auth = t.Callable[[requests.PreparedRequest], requests.PreparedRequest]
+OPENAPI_URL = "https://api.planetscale.com/v1/openapi-spec"
 
 
-class PlanetScaleAPIStream(RESTStream[int]):
+class StreamKey(t.NamedTuple):
+    """A key for a stream in the OpenAPI spec."""
+
+    path: str
+    method: str
+    expected_status: int = 200
+
+
+class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
+    """OpenAPI source for PlanetScale API."""
+
+    @override
+    def get_unresolved_schema(self, key: StreamKey) -> dict[str, t.Any]:
+        return get_in(
+            [
+                "paths",
+                key.path,
+                key.method,
+                "responses",
+                str(key.expected_status),
+                "schema",
+            ],
+            self.spec,
+        )
+
+    @override
+    def fetch_schema(self, key: StreamKey) -> dict[str, t.Any]:
+        schema = super().fetch_schema(key)
+        return schema["properties"]["data"]["items"]
+
+
+class SchemaFromPath(StreamSchema[StreamKey]):
+    """A stream schema from a path in the OpenAPI spec."""
+
+    @override
+    def get_stream_schema(
+        self,
+        stream: PlanetScaleAPIStream,  # type: ignore[override]
+        stream_class: type[PlanetScaleAPIStream],  # type: ignore[override]
+    ) -> dict[str, t.Any]:
+        key = StreamKey(
+            path=stream.spec_path or stream.path,
+            method=stream.http_method.lower(),
+            expected_status=200,
+        )
+        return self.schema_source.get_schema(key)
+
+
+class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
     """PlanetScaleAPI stream class."""
-
-    # Abstract class properties:
-    schema_path: tuple[str, ...]
 
     # Class properties
     PAGE_SIZE = 100
     records_jsonpath = "$.data[*]"
 
+    #: The endpoint for this resource in the OpenAPI spec. If not provided, the
+    #: `path` attribute is used.
+    spec_path: str | None = None
+
+    schema = SchemaFromPath(PlanetScaleOpenAPISource(OPENAPI_URL))  # type: ignore[assignment]
+
     @property
+    @override
     def url_base(self) -> str:
-        """Return the API URL root, configurable via tap settings."""
-        return "https://api.planetscale.com"
+        return "https://api.planetscale.com/v1"
 
     @property
+    @override
     def authenticator(self) -> APIKeyAuthenticator:
-        """Return a new authenticator object.
-
-        Returns:
-            An authenticator instance.
-        """
         token_id = self.config["service_token_id"]
         token = self.config["service_token"]
         return APIKeyAuthenticator.create_for_stream(
@@ -47,38 +102,22 @@ class PlanetScaleAPIStream(RESTStream[int]):
         )
 
     @property
+    @override
     def http_headers(self) -> dict:
-        """Return the http headers needed.
-
-        Returns:
-            A dictionary of HTTP headers.
-        """
         return {
             "accept": "application/json",
         }
 
+    @override
     def get_new_paginator(self) -> BasePageNumberPaginator:
-        """Create a new pagination helper instance.
-
-        Returns:
-            A pagination helper instance.
-        """
         return BasePageNumberPaginator(1)
 
+    @override
     def get_url_params(
         self,
-        context: Context | None,  # noqa: ARG002
-        next_page_token: t.Any | None,  # noqa: ANN401
+        context: Context | None,
+        next_page_token: t.Any | None,
     ) -> dict[str, t.Any]:
-        """Return a dictionary of values to be used in URL parameterization.
-
-        Args:
-            context: The stream context.
-            next_page_token: The next page index or value.
-
-        Returns:
-            A dictionary of URL query parameters.
-        """
         params: dict[str, t.Any] = {"per_page": self.PAGE_SIZE}
         if next_page_token:
             params["page"] = next_page_token

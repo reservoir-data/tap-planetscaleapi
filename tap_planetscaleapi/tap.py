@@ -2,32 +2,18 @@
 
 from __future__ import annotations
 
+import sys
 import typing as t
 
-import requests
 from singer_sdk import Tap
 from singer_sdk import typing as th  # JSON schema typing helpers
-from toolz.dicttoolz import get_in
 
 from tap_planetscaleapi import streams
 
-OPENAPI_URL = "https://api.planetscale.com/v1/openapi-spec"
-STREAMS = [
-    streams.OrganizationsStream,
-    streams.OrganizationRegionsStream,
-    streams.DatabasesStream,
-    streams.DatabaseReadOnlyRegionsStream,
-    streams.DatabaseRegionsStream,
-    streams.BranchesStream,
-    # streams.BranchSchemaStream,
-    streams.BackupsStream,
-    streams.PasswordsStream,
-    streams.DeployRequestsStream,
-    streams.DeployOperationsStream,
-    streams.DeployRequestReviewsStreams,
-    # streams.OAuthApplicationsStream,
-    streams.RegionsStream,
-]
+if sys.version_info >= (3, 12):
+    from typing import override
+else:
+    from typing_extensions import override
 
 if t.TYPE_CHECKING:
     from tap_planetscaleapi.client import PlanetScaleAPIStream
@@ -54,28 +40,24 @@ class TapPlanetScaleAPI(Tap):
         ),
     ).to_dict()
 
-    def get_openapi_schema(self) -> dict[t.Any, t.Any]:
-        """Retrieve OpenAPI schema for this API.
-
-        Returns:
-            OpenAPI schema.
-        """
-        return requests.get(OPENAPI_URL, timeout=5).json()  # type: ignore[no-any-return]
-
+    @override
     def discover_streams(self) -> list[PlanetScaleAPIStream]:
-        """Return a list of discovered streams.
-
-        Returns:
-            A list of Neon Serverless Postgres streams.
-        """
-        streams: list[PlanetScaleAPIStream] = []
-        openapi_schema = self.get_openapi_schema()
-
-        for stream_type in STREAMS:
-            schema = get_in(stream_type.schema_path, openapi_schema)
-            streams.append(stream_type(tap=self, schema=schema))
-
-        return sorted(streams, key=lambda x: x.name)
+        return [
+            streams.OrganizationsStream(tap=self),
+            streams.OrganizationRegionsStream(tap=self),
+            streams.DatabasesStream(tap=self),
+            streams.DatabaseReadOnlyRegionsStream(tap=self),
+            streams.DatabaseRegionsStream(tap=self),
+            streams.BranchesStream(tap=self),
+            # streams.BranchSchemaStream(tap=self),  # noqa: ERA001
+            streams.BackupsStream(tap=self),
+            streams.PasswordsStream(tap=self),
+            streams.DeployRequestsStream(tap=self),
+            streams.DeployOperationsStream(tap=self),
+            streams.DeployRequestReviewsStreams(tap=self),
+            # streams.OAuthApplicationsStream(tap=self),  # noqa: ERA001
+            streams.RegionsStream(tap=self),
+        ]
 
 
 if __name__ == "__main__":
