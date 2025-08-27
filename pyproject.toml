@@ -31,10 +31,10 @@ dependencies = [
 s3 = ["s3fs>=2025.5.0"]
 
 [project.urls]
-Homepage = "https://github.com/edgarrmondragon/tap-planetscalepi"
-Documentation = "https://github.com/edgarrmondragon/tap-planetscalepi#"
-"Issue Tracker" = "https://github.com/edgarrmondragon/tap-planetscalepi/issues"
-Repository = "https://github.com/edgarrmondragon/tap-planetscalepi"
+Homepage = "https://github.com/reservoir-data/tap-planetscalepi"
+Documentation = "https://github.com/reservoir-data/tap-planetscalepi#"
+"Issue Tracker" = "https://github.com/reservoir-data/tap-planetscalepi/issues"
+Repository = "https://github.com/reservoir-data/tap-planetscalepi"
 
 [project.scripts]
 tap-planetscaleapi = "tap_planetscaleapi.tap:TapPlanetScaleAPI.cli"

@@ -6,11 +6,11 @@
   <a href="https://pypi.org/p/tap-planetscaleapi/">
     <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/tap-planetscaleapi">
   </a>
-  <a href="https://results.pre-commit.ci/latest/github/edgarrmondragon/tap-planetscaleapi/main">
-    <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/edgarrmondragon/tap-planetscaleapi/main.svg"/>
+  <a href="https://results.pre-commit.ci/latest/github/reservoir-data/tap-planetscaleapi/main">
+    <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/reservoir-data/tap-planetscaleapi/main.svg"/>
   </a>
-  <a href="https://github.com/edgarrmondragon/tap-planetscaleapi/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/edgarrmondragon/tap-planetscaleapi"/>
+  <a href="https://github.com/reservoir-data/tap-planetscaleapi/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-planetscaleapi"/>
   </a>
   <a href="https://github.com/astral-sh/ruff">
     <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="Ruff" style="max-width:100%;">
@@ -37,7 +37,7 @@ pipx install tap-planetscaleapi
 Install from GitHub:
 
 ```bash
-pipx install git+https://github.com/edgarrmondragon/tap-planetscaleapi.git@main
+pipx install git+https://github.com/reservoir-data/tap-planetscaleapi.git@main
 ```
 
 ## Capabilities
