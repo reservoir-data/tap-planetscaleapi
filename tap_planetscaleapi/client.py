@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import abc
+import json
 import sys
 import typing as t
 
@@ -33,6 +34,11 @@ class StreamKey(t.NamedTuple):
 
 class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
     """OpenAPI source for PlanetScale API."""
+
+    def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
+        """Initialize the OpenAPI source."""
+        super().__init__(*args, **kwargs)
+        self._content_loaders.setdefault("./v1/openapi-spec", json.loads)
 
     @override
     def get_unresolved_schema(self, key: StreamKey) -> dict[str, t.Any]:
@@ -98,12 +104,7 @@ class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
     def authenticator(self) -> APIKeyAuthenticator:
         token_id = self.config["service_token_id"]
         token = self.config["service_token"]
-        return APIKeyAuthenticator.create_for_stream(
-            self,
-            key="Authorization",
-            value=f"{token_id}:{token}",
-            location="header",
-        )
+        return APIKeyAuthenticator(key="Authorization", value=f"{token_id}:{token}", location="header")
 
     @property
     @override
@@ -117,11 +118,7 @@ class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
         return BasePageNumberPaginator(1)
 
     @override
-    def get_url_params(
-        self,
-        context: Context | None,
-        next_page_token: t.Any | None,
-    ) -> dict[str, t.Any]:
+    def get_url_params(self, context: Context | None, next_page_token: t.Any | None) -> dict[str, t.Any]:
         params: dict[str, t.Any] = {"per_page": self.PAGE_SIZE}
         if next_page_token:
             params["page"] = next_page_token
