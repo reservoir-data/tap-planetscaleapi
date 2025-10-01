@@ -35,11 +35,6 @@ class StreamKey(t.NamedTuple):
 class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
     """OpenAPI source for PlanetScale API."""
 
-    def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
-        """Initialize the OpenAPI source."""
-        super().__init__(*args, **kwargs)
-        self._content_loaders.setdefault("./v1/openapi-spec", json.loads)
-
     @override
     def get_unresolved_schema(self, key: StreamKey) -> dict[str, t.Any]:
         return get_in(
@@ -111,6 +106,7 @@ class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
     def http_headers(self) -> dict:
         return {
             "accept": "application/json",
+            "user-agent": self.user_agent,
         }
 
     @override
