@@ -33,7 +33,7 @@ jobs:
       with:
         name: Packages
         path: dist
-    - uses: svenstaro/upload-release-action@7027b7670c56b9473901daad1fb8a09ab534688e # latest
+    - uses: svenstaro/upload-release-action@7f93926b6eec9cfdde9a8dfac51a4e23370b7c8e # latest
       with:
         file: dist/*.whl
         tag: ${{ github.ref }}
