@@ -1,0 +1,1020 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branches_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branches_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "open_schema_recommendations_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "development_branches_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "production_branches_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "issues_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "multiple_admins_required_for_deletion"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "ready"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "at_backup_restore_branches_limit"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "at_development_branch_usage_limit"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "import_check_errors"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "started_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "finished_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "data_source"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "data_source",
+        "properties",
+        "hostname"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "data_source",
+        "properties",
+        "port"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "data_import",
+        "properties",
+        "data_source",
+        "properties",
+        "database"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "provider"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "public_ip_addresses"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "location"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "slug"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "current_default"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "html_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "sharded"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "default_branch_shard_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "default_branch_read_only_regions_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "default_branch_table_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "default_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "require_approval_for_deploy"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "resizing"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "resize_queued"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "allow_data_branching"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "foreign_keys_enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "automatic_migrations"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restrict_branch_region"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "insights_raw_queries"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "plan"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "insights_enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "production_branch_web_console"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "migration_table_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "migration_framework"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_last_updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "kind"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "allow_data_branching": {
+        "description": "Whether seeding branches with data is enabled for all branches",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "at_backup_restore_branches_limit": {
+        "description": "If the database has reached its backup restored branch limit",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "at_development_branch_usage_limit": {
+        "description": "If the database has reached its development branch limit",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "automatic_migrations": {
+        "description": "Whether to automatically manage Rails migrations during deploy requests",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "branches_count": {
+        "description": "The total number of database branches",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "branches_url": {
+        "description": "The URL to retrieve this database's branches via the API",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the database was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "data_import": {
+        "additionalProperties": false,
+        "properties": {
+          "data_source": {
+            "additionalProperties": false,
+            "properties": {
+              "database": {
+                "description": "Database name of the data source",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "hostname": {
+                "description": "Hostname of the data source",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "port": {
+                "description": "Port of the data source",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "hostname",
+              "port",
+              "database"
+            ],
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "finished_at": {
+            "description": "When the import finished",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "import_check_errors": {
+            "description": "Errors encountered during the import check",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "started_at": {
+            "description": "When the import started",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "description": "State of the data import",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "state",
+          "import_check_errors",
+          "started_at",
+          "finished_at",
+          "data_source"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "default_branch": {
+        "description": "The default branch for the database",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "default_branch_read_only_regions_count": {
+        "description": "Number of read only regions in the default branch",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "default_branch_shard_count": {
+        "description": "Number of shards in the default branch",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "default_branch_table_count": {
+        "description": "Number of tables in the default branch schema",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "development_branches_count": {
+        "description": "The total number of database development branches",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "foreign_keys_enabled": {
+        "description": "Whether foreign key constraints are enabled",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "html_url": {
+        "description": "The URL to see this database's branches in the web UI",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the database",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "insights_enabled": {
+        "description": "True if query insights is enabled for the database",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "insights_raw_queries": {
+        "description": "Whether raw SQL queries are collected",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "issues_count": {
+        "description": "The total number of ongoing issues within a database",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "kind": {
+        "description": "The kind of database",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "migration_framework": {
+        "description": "Framework used for applying migrations",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "migration_table_name": {
+        "description": "Table name to use for copying schema migration data",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "multiple_admins_required_for_deletion": {
+        "description": "If the database requires multiple admins for deletion",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "Name of the database",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "open_schema_recommendations_count": {
+        "description": "The total number of schema recommendations",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "plan": {
+        "description": "The database plan",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "production_branch_web_console": {
+        "description": "Whether web console is enabled for production branches",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "production_branches_count": {
+        "description": "The total number of database production branches",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "ready": {
+        "description": "If the database is ready to be used",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "region": {
+        "additionalProperties": false,
+        "properties": {
+          "current_default": {
+            "description": "True if the region is the default for new branch creation",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "Name of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "enabled": {
+            "description": "Whether or not the region is currently active",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "location": {
+            "description": "Location of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "provider": {
+            "description": "Provider for the region (ex. AWS)",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "public_ip_addresses": {
+            "description": "Public IP addresses for the region",
+            "items": {
+              "type": "string"
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "slug": {
+            "description": "The slug of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "provider",
+          "enabled",
+          "public_ip_addresses",
+          "display_name",
+          "location",
+          "slug",
+          "current_default"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "require_approval_for_deploy": {
+        "description": "Whether an approval is required to deploy schema changes to this database",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "resize_queued": {
+        "description": "True if a branch has a queued resize request",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "resizing": {
+        "description": "True if a branch is currently resizing",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "restrict_branch_region": {
+        "description": "Whether to restrict branch creation to one region",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "schema_last_updated_at": {
+        "description": "When the default branch schema was last changed.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "sharded": {
+        "description": "If the database is sharded",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "State of the database",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the database was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "url": {
+        "description": "The URL to the database API endpoint",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "url",
+      "branches_url",
+      "branches_count",
+      "open_schema_recommendations_count",
+      "development_branches_count",
+      "production_branches_count",
+      "issues_count",
+      "multiple_admins_required_for_deletion",
+      "ready",
+      "at_backup_restore_branches_limit",
+      "at_development_branch_usage_limit",
+      "data_import",
+      "region",
+      "html_url",
+      "name",
+      "state",
+      "sharded",
+      "default_branch_shard_count",
+      "default_branch_read_only_regions_count",
+      "default_branch_table_count",
+      "default_branch",
+      "require_approval_for_deploy",
+      "resizing",
+      "resize_queued",
+      "allow_data_branching",
+      "foreign_keys_enabled",
+      "automatic_migrations",
+      "restrict_branch_region",
+      "insights_raw_queries",
+      "plan",
+      "insights_enabled",
+      "production_branch_web_console",
+      "migration_table_name",
+      "migration_framework",
+      "created_at",
+      "updated_at",
+      "schema_last_updated_at",
+      "kind"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "databases",
+  "tap_stream_id": "databases"
+}

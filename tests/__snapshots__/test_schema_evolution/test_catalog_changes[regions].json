@@ -1,0 +1,154 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "provider"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "public_ip_addresses"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "location"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "slug"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "display_name": {
+        "description": "The name of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "enabled": {
+        "description": "Whether new clusters can be created in this region",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "location": {
+        "description": "The location of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "provider": {
+        "description": "The cloud provider for the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "public_ip_addresses": {
+        "description": "List of public IP addresses for the region",
+        "items": {
+          "type": "string"
+        },
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "slug": {
+        "description": "The slug identifier for the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "enabled",
+      "public_ip_addresses",
+      "display_name",
+      "location",
+      "slug"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "regions",
+  "tap_stream_id": "regions"
+}

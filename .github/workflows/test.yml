@@ -64,4 +64,5 @@ jobs:
         uv run pytest
     - name: Static type checking
       run: |
-        uv run mypy tap_planetscaleapi
+        uv run mypy tap_planetscaleapi tests
+        uv run ty check tap_planetscaleapi tests

@@ -1,0 +1,171 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "provider"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "public_ip_addresses"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "location"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "slug"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "current_default"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "current_default": {
+        "description": "True if the region is the default for new branch creation",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "display_name": {
+        "description": "Name of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "enabled": {
+        "description": "Whether or not the region is currently active",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "location": {
+        "description": "Location of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "provider": {
+        "description": "Provider for the region (ex. AWS)",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "public_ip_addresses": {
+        "description": "Public IP addresses for the region",
+        "items": {
+          "type": "string"
+        },
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "slug": {
+        "description": "The slug of the region",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "enabled",
+      "public_ip_addresses",
+      "display_name",
+      "location",
+      "slug",
+      "current_default"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "organization_regions",
+  "tap_stream_id": "organization_regions"
+}

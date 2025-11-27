@@ -1,0 +1,373 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "billing_email"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "plan"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "valid_billing_info"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "sso"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "sso_directory"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "single_tenancy"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "managed_tenancy"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "has_past_due_invoices"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "sso_portal_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "features"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "idp_managed_roles"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "invoice_budget_amount"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "keyspace_shard_limit"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "has_card"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "payment_info_required"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "billing_email": {
+        "description": "The billing email of the organization",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the organization was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "database_count": {
+        "description": "The number of databases in the organization",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "features": {
+        "additionalProperties": true,
+        "description": "Features that can be enabled on the organization",
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "has_card": {
+        "description": "Whether or not the organization has a payment method on file",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "has_past_due_invoices": {
+        "description": "Whether or not the organization has past due billing invoices",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID for the organization",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "idp_managed_roles": {
+        "description": "Whether or not the IdP provider is be responsible for managing roles in PlanetScale",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "invoice_budget_amount": {
+        "description": "The expected monthly budget for the organization",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "keyspace_shard_limit": {
+        "description": "The keyspace shard limit for the organization",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "managed_tenancy": {
+        "description": "Whether or not the organization has managed tenancy enabled",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "The name of the organization",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "payment_info_required": {
+        "description": "Whether or not the organization requires payment information",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "plan": {
+        "description": "The billing plan of the organization",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "single_tenancy": {
+        "description": "Whether or not the organization has single tenancy enabled",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "sso": {
+        "description": "Whether or not SSO is enabled on the organization",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "sso_directory": {
+        "description": "Whether or not the organization uses an SSO directory",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "sso_portal_url": {
+        "description": "The URL of the organization's SSO portal",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the organization was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "valid_billing_info": {
+        "description": "Whether or not the organization's billing information is valid",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "billing_email",
+      "created_at",
+      "updated_at",
+      "plan",
+      "valid_billing_info",
+      "sso",
+      "sso_directory",
+      "single_tenancy",
+      "managed_tenancy",
+      "has_past_due_invoices",
+      "database_count",
+      "sso_portal_url",
+      "features",
+      "idp_managed_roles",
+      "invoice_budget_amount",
+      "keyspace_shard_limit",
+      "has_card",
+      "payment_info_required"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "organizations",
+  "tap_stream_id": "organizations"
+}

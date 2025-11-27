@@ -2,6 +2,8 @@
 
 import pytest
 
+pytest_plugins = "pytester"
+
 XFAIL_NULLABLE = pytest.mark.xfail(reason="Null not documented in OpenAPI spec")
 XFAIL_SCHEMA_MISMATCH = pytest.mark.xfail(reason="Schema mismatch against OpenAPI spec")
 
