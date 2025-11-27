@@ -41,10 +41,12 @@ tap-planetscaleapi = "tap_planetscaleapi.tap:TapPlanetScaleAPI.cli"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.15.0",
-    "pytest>=8.4",
+    "mypy>=1.18.0",
+    "pytest>=9",
     "requests-cache>=1.2",
     "singer-sdk[testing]",
+    "syrupy>=5.0.0",
+    "ty>=0.0.1a28",
     "types-requests>=2.31.0.6",
 ]
 
@@ -84,7 +86,8 @@ requires = [
 ]
 build-backend = "hatchling.build"
 
-[tool.pytest.ini_options]
+[tool.pytest]
+minversion = "9.0"
 filterwarnings = [
     "error",
     "default:Fields in transformed catalog but not in records:UserWarning",

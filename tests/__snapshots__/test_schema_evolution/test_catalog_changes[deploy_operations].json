@@ -1,0 +1,358 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "keyspace_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "table_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "operation_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "eta_seconds"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "progress_percentage"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deploy_error_docs_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "ddl_statement"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "syntax_highlighted_ddl"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "throttled_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "can_drop_data"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "table_locked"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "table_recently_used"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "table_recently_used_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "removed_foreign_key_names"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deploy_errors"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "can_drop_data": {
+        "description": "Whether or not the deploy operation is capable of dropping data",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the deploy operation was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ddl_statement": {
+        "description": "The DDL statement for the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deploy_error_docs_url": {
+        "description": "A link to documentation explaining the deploy error, if present",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deploy_errors": {
+        "description": "Deploy errors for the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "eta_seconds": {
+        "description": "The estimated seconds until completion for the deploy operation",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID for the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "keyspace_name": {
+        "description": "The keyspace modified by the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "operation_name": {
+        "description": "The operation name of the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "progress_percentage": {
+        "description": "The percent completion for the deploy operation",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "removed_foreign_key_names": {
+        "description": "Names of foreign keys removed by this operation",
+        "items": {
+          "type": "string"
+        },
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "The state of the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "syntax_highlighted_ddl": {
+        "description": "A syntax-highlighted DDL statement for the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "table_locked": {
+        "description": "Whether or not the table modified by the deploy operation is currently locked",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "table_name": {
+        "description": "The name of the table modifed by the deploy operation",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "table_recently_used": {
+        "description": "Whether or not the table modified by the deploy operation was recently used",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "table_recently_used_at": {
+        "description": "When the table modified by the deploy operation was last used",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "throttled_at": {
+        "description": "When the deploy operation was last throttled",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the deploy operation was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "state",
+      "keyspace_name",
+      "table_name",
+      "operation_name",
+      "eta_seconds",
+      "progress_percentage",
+      "deploy_error_docs_url",
+      "ddl_statement",
+      "syntax_highlighted_ddl",
+      "created_at",
+      "updated_at",
+      "throttled_at",
+      "can_drop_data",
+      "table_locked",
+      "table_recently_used",
+      "table_recently_used_at",
+      "removed_foreign_key_names",
+      "deploy_errors"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "deploy_operations",
+  "tap_stream_id": "deploy_operations"
+}

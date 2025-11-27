@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import abc
-import json
 import sys
 import typing as t
+from importlib import resources
+from typing import cast
 
 from singer_sdk import OpenAPISchema, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
@@ -13,15 +14,16 @@ from singer_sdk.pagination import BasePageNumberPaginator
 from singer_sdk.streams import RESTStream
 from toolz.dicttoolz import get_in
 
+from tap_planetscaleapi import openapi
+
 if sys.version_info >= (3, 12):
     from typing import override
 else:
     from typing_extensions import override
 
 if t.TYPE_CHECKING:
+    from singer_sdk import Stream
     from singer_sdk.helpers.types import Context
-
-OPENAPI_URL = "https://api.planetscale.com/v1/openapi-spec"
 
 
 class StreamKey(t.NamedTuple):
@@ -65,9 +67,10 @@ class SchemaFromPath(StreamSchema[StreamKey]):
     @override
     def get_stream_schema(
         self,
-        stream: PlanetScaleAPIStream,  # type: ignore[override]
-        stream_class: type[PlanetScaleAPIStream],  # type: ignore[override]
+        stream: Stream,  # type: ignore[override]
+        stream_class: type[Stream],  # type: ignore[override]
     ) -> dict[str, t.Any]:
+        stream = cast("PlanetScaleAPIStream", stream)
         key = StreamKey(
             path=stream.spec_path or stream.path,
             method=stream.http_method.lower(),
@@ -87,7 +90,7 @@ class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
     #: `path` attribute is used.
     spec_path: str | None = None
 
-    schema = SchemaFromPath(PlanetScaleOpenAPISource(OPENAPI_URL))  # type: ignore[assignment]
+    schema = SchemaFromPath(PlanetScaleOpenAPISource(resources.files(openapi) / "openapi.json"))  # type: ignore[assignment]
 
     @property
     @override

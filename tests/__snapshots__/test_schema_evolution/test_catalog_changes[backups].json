@@ -1,0 +1,972 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "estimated_storage_cost"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "expires_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deleted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "pvc_size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "protected"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "required"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_branches"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "target"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "retention_value"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "retention_unit"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "frequency_value"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "frequency_unit"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "schedule_time"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "schedule_day"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "schedule_week"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "last_ran_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "next_run_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
+        "required"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "linted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_snapshot",
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch",
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "database_branch",
+        "properties",
+        "deleted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "actor": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "backup_policy": {
+        "additionalProperties": false,
+        "properties": {
+          "created_at": {
+            "description": "When the backup policy was created",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "frequency_unit": {
+            "description": "The unit for the frequency of the backup policy",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "frequency_value": {
+            "description": "A number value for the frequency of the backup policy",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the backup policy",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_ran_at": {
+            "description": "When the backup was last run",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "description": "The name of the backup policy",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "next_run_at": {
+            "description": "When the backup will next run",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required": {
+            "description": "Whether the policy is a required system backup",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "retention_unit": {
+            "description": "The unit for the retention period of the backup policy",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retention_value": {
+            "description": "A number value for the retention period of the backup policy",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "schedule_day": {
+            "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "schedule_time": {
+            "description": "The time of day that the backup is scheduled, in HH:MM format",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "schedule_week": {
+            "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "target": {
+            "description": "Whether the policy is for production or development branches",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "description": "When the backup policy was last updated",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "target",
+          "retention_value",
+          "retention_unit",
+          "frequency_value",
+          "frequency_unit",
+          "schedule_time",
+          "schedule_day",
+          "schedule_week",
+          "created_at",
+          "updated_at",
+          "last_ran_at",
+          "next_run_at",
+          "required"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "completed_at": {
+        "description": "When the backup completed",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the backup was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "database_branch": {
+        "additionalProperties": false,
+        "properties": {
+          "created_at": {
+            "description": "When the resource was created",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deleted_at": {
+            "description": "When the resource was deleted, if deleted",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID for the resource",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "description": "The name for the resource",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "description": "When the resource was last updated",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "created_at",
+          "updated_at",
+          "deleted_at"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "deleted_at": {
+        "description": "When the backup was deleted",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "estimated_storage_cost": {
+        "description": "The estimated storage cost of the backup",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "expires_at": {
+        "description": "When the backup expires",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the backup",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "The name of the backup",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "protected": {
+        "description": "Whether or not the backup is protected from deletion",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "pvc_size": {
+        "description": "Size of the PVC used for the backup",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "required": {
+        "description": "Whether or not the backup policy is required",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "restored_branches": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "created_at": {
+              "description": "When the resource was created",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "deleted_at": {
+              "description": "When the resource was deleted, if deleted",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "description": "The ID for the resource",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "name": {
+              "description": "The name for the resource",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "updated_at": {
+              "description": "When the resource was last updated",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "created_at",
+            "updated_at",
+            "deleted_at"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "schema_snapshot": {
+        "additionalProperties": false,
+        "properties": {
+          "created_at": {
+            "description": "When the schema snapshot was created",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the schema snapshot",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "linted_at": {
+            "description": "When the schema snapshot was last linted",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "description": "The name of the schema snapshot",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "description": "When the schema snapshot was last updated",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "url": {
+            "description": "The URL to the schema snapshot in the PlanetScale app",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "created_at",
+          "updated_at",
+          "linted_at",
+          "url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "size": {
+        "description": "The size of the backup in bytes",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "started_at": {
+        "description": "When the backup started",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "The current state of the backup",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the backup was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "state",
+      "size",
+      "estimated_storage_cost",
+      "created_at",
+      "updated_at",
+      "started_at",
+      "expires_at",
+      "completed_at",
+      "deleted_at",
+      "pvc_size",
+      "protected",
+      "required",
+      "restored_branches",
+      "actor",
+      "backup_policy",
+      "schema_snapshot",
+      "database_branch"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "backups",
+  "tap_stream_id": "backups"
+}

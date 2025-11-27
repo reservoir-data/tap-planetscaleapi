@@ -1,0 +1,912 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deleted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restore_checklist_completed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_last_updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "kind"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mysql_address"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mysql_edge_address"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "direct_vtgate"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "vtgate_size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "vtgate_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "cluster_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "cluster_iops"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "ready"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "schema_ready"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "metal"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "production"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "safe_migrations"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "sharded"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "shard_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stale_schema"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch",
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "restored_from_branch",
+        "properties",
+        "deleted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "private_edge_connectivity"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "has_replicas"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "has_read_only_replicas"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "html_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "provider"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "enabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "public_ip_addresses"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "location"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "slug"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "region",
+        "properties",
+        "current_default"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "parent_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "actor": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "cluster_iops": {
+        "description": "IOPS for the cluster",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "cluster_name": {
+        "description": "The SKU representing the branch's cluster size",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the branch was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deleted_at": {
+        "description": "When the branch was deleted",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "direct_vtgate": {
+        "description": "True if the branch allows passwords to connect directly to a vtgate, bypassing load balancers",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "has_read_only_replicas": {
+        "description": "True if the branch has read-only replica servers",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "has_replicas": {
+        "description": "True if the branch has replica servers",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "html_url": {
+        "description": "Planetscale app URL for the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "kind": {
+        "description": "The kind of branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "metal": {
+        "description": "Whether or not this is a metal database",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "mysql_address": {
+        "description": "The MySQL address for the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mysql_edge_address": {
+        "description": "The address of the MySQL provider for the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "The name of the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "parent_branch": {
+        "description": "The name of the parent branch from which the branch was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "private_edge_connectivity": {
+        "description": "True if private connections are enabled",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "production": {
+        "description": "Whether or not the branch is a production branch",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "ready": {
+        "description": "Whether or not the branch is ready to serve queries",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "region": {
+        "additionalProperties": false,
+        "properties": {
+          "current_default": {
+            "description": "True if the region is the default for new branch creation",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "Name of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "enabled": {
+            "description": "Whether or not the region is currently active",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "location": {
+            "description": "Location of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "provider": {
+            "description": "Provider for the region (ex. AWS)",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "public_ip_addresses": {
+            "description": "Public IP addresses for the region",
+            "items": {
+              "type": "string"
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "slug": {
+            "description": "The slug of the region",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "provider",
+          "enabled",
+          "public_ip_addresses",
+          "display_name",
+          "location",
+          "slug",
+          "current_default"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "restore_checklist_completed_at": {
+        "description": "When a user last marked a backup restore checklist as completed",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "restored_from_branch": {
+        "additionalProperties": false,
+        "properties": {
+          "created_at": {
+            "description": "When the resource was created",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deleted_at": {
+            "description": "When the resource was deleted, if deleted",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID for the resource",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "description": "The name for the resource",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "description": "When the resource was last updated",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "created_at",
+          "updated_at",
+          "deleted_at"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "safe_migrations": {
+        "description": "Whether or not the branch has safe migrations enabled",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "schema_last_updated_at": {
+        "description": "When the schema for the branch was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "schema_ready": {
+        "description": "Whether or not the schema is ready for queries",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "shard_count": {
+        "description": "The number of shards in the branch",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "sharded": {
+        "description": "Whether or not the branch is sharded",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "stale_schema": {
+        "description": "Whether or not the branch has a stale schema",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "The current state of the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the branch was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "url": {
+        "description": "Planetscale API URL for the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "vtgate_count": {
+        "description": "The number of vtgate instances in the branch",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "vtgate_size": {
+        "description": "The size of the vtgate cluster for the branch",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "created_at",
+      "updated_at",
+      "deleted_at",
+      "restore_checklist_completed_at",
+      "schema_last_updated_at",
+      "kind",
+      "mysql_address",
+      "mysql_edge_address",
+      "state",
+      "direct_vtgate",
+      "vtgate_size",
+      "vtgate_count",
+      "cluster_name",
+      "cluster_iops",
+      "ready",
+      "schema_ready",
+      "metal",
+      "production",
+      "safe_migrations",
+      "sharded",
+      "shard_count",
+      "stale_schema",
+      "actor",
+      "restored_from_branch",
+      "private_edge_connectivity",
+      "has_replicas",
+      "has_read_only_replicas",
+      "html_url",
+      "url",
+      "region",
+      "parent_branch"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "branches",
+  "tap_stream_id": "branches"
+}

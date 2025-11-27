@@ -1,11 +1,13 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
+from typing import Any
+
 from requests_cache import install_cache
 from singer_sdk.testing import SuiteConfig, get_tap_test_class
 
 from tap_planetscaleapi.tap import TapPlanetScaleAPI
 
-SAMPLE_CONFIG = {}
+SAMPLE_CONFIG: dict[str, Any] = {}
 
 install_cache(TapPlanetScaleAPI.name)
 

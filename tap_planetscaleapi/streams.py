@@ -46,7 +46,7 @@ class OrganizationRegionsStream(PlanetScaleAPIStream):
     path = "/organizations/{organization_name}/regions"
     primary_keys = ("id",)
     replication_key = None
-    spec_path = "/organizations/{name}/regions"
+    spec_path = "/organizations/{organization}/regions"
 
 
 class DatabasesStream(PlanetScaleAPIStream):
@@ -79,7 +79,7 @@ class DatabaseReadOnlyRegionsStream(PlanetScaleAPIStream):
     path = "/organizations/{organization_name}/databases/{database_name}/read-only-regions"
     primary_keys = ("id",)
     replication_key = None
-    spec_path = "/organizations/{organization}/databases/{name}/read-only-regions"
+    spec_path = "/organizations/{organization}/databases/{database}/read-only-regions"
 
 
 class DatabaseRegionsStream(PlanetScaleAPIStream):
@@ -91,7 +91,7 @@ class DatabaseRegionsStream(PlanetScaleAPIStream):
     path = "/organizations/{organization_name}/databases/{database_name}/regions"
     primary_keys = ("id",)
     replication_key = None
-    spec_path = "/organizations/{organization}/databases/{name}/regions"
+    spec_path = "/organizations/{organization}/databases/{database}/regions"
 
 
 class BranchesStream(PlanetScaleAPIStream):

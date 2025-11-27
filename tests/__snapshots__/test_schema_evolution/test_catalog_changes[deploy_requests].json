@@ -1,0 +1,1882 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "number"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "closed_by"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "closed_by",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "closed_by",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "closed_by",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted_by"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted_by",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted_by",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted_by",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "branch_deleted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "into_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "into_branch_sharded"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "into_branch_shard_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "approved"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment_state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "auto_cutover"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "auto_delete_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_expiring"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deploy_check_errors"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "finished_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "queued_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "ready_to_cutover_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "started_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "submitted_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "into_branch"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deploy_request_number"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deployable"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "preceding_deployments"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deploy_operations"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deploy_operation_summaries"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "lint_errors"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "sequential_diff_dependencies"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "lookup_vindex_operations"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "throttler_configurations"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "deployment_revert_request"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cutover_actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cancelled_actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cancelled_actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cancelled_actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "cancelled_actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "schema_last_updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "table_locked"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "locked_table_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "instant_ddl"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "instant_ddl_eligible"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "num_comments"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "html_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "notes"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "html_body"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "closed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "actor": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "approved": {
+        "description": "Whether or not the deploy request is approved",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "branch": {
+        "description": "The name of the branch the deploy request was created from",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "branch_deleted": {
+        "description": "Whether or not the deploy request branch was deleted",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "branch_deleted_at": {
+        "description": "When the deploy request branch was deleted",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "branch_deleted_by": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "branch_id": {
+        "description": "The ID of the branch the deploy request was created from",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "closed_at": {
+        "description": "When the deploy request was closed",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "closed_by": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the deploy request was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deployed_at": {
+        "description": "When the deploy request was deployed",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deployment": {
+        "additionalProperties": false,
+        "properties": {
+          "actor": {
+            "additionalProperties": false,
+            "properties": {
+              "avatar_url": {
+                "description": "The URL of the actor's avatar",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "display_name": {
+                "description": "The name of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "description": "The ID of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "display_name",
+              "avatar_url"
+            ],
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "auto_cutover": {
+            "description": "Whether or not to automatically cutover once deployment is finished",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "auto_delete_branch": {
+            "description": "Whether or not to automatically delete the head branch once deployment is finished",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "cancelled_actor": {
+            "additionalProperties": false,
+            "properties": {
+              "avatar_url": {
+                "description": "The URL of the actor's avatar",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "display_name": {
+                "description": "The name of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "description": "The ID of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "display_name",
+              "avatar_url"
+            ],
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "created_at": {
+            "description": "When the deployment was created",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cutover_actor": {
+            "additionalProperties": false,
+            "properties": {
+              "avatar_url": {
+                "description": "The URL of the actor's avatar",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "display_name": {
+                "description": "The name of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "description": "The ID of the actor",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "display_name",
+              "avatar_url"
+            ],
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "cutover_at": {
+            "description": "When the cutover for the deployment was initiated",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cutover_expiring": {
+            "description": "Whether or not the deployment cutover will expire soon",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "deploy_check_errors": {
+            "description": "Deploy check errors for the deployment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deploy_operation_summaries": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "can_drop_data": {
+                  "description": "Whether or not the deploy operation summary is capable of dropping data",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "created_at": {
+                  "description": "When the deploy operation summary was created",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ddl_statement": {
+                  "description": "The DDL statement for the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "deploy_errors": {
+                  "description": "Deploy errors for the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "eta_seconds": {
+                  "description": "The estimated seconds until completion for the deploy operation summary",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "description": "The ID for the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "keyspace_name": {
+                  "description": "The keyspace modified by the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "operation_name": {
+                  "description": "The operation name of the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "operations": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "eta_seconds": {
+                        "description": "The estimated seconds until completion for the deploy operation",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "id": {
+                        "description": "The ID for the deploy operation",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "progress_percentage": {
+                        "description": "The percent completion for the deploy operation",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "shard": {
+                        "description": "The shard the deploy operation is being performed on",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "state": {
+                        "description": "The state of the deploy operation",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "shard",
+                      "state",
+                      "progress_percentage",
+                      "eta_seconds"
+                    ],
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                },
+                "progress_percentage": {
+                  "description": "The percent completion for the deploy operation summary",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "removed_foreign_key_names": {
+                  "description": "Names of foreign keys removed by this operation summary",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                },
+                "shard_count": {
+                  "description": "The number of shards in the keyspace modified by the deploy operation summary",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "shard_names": {
+                  "description": "Names of shards in the keyspace modified by the deploy operation summary",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                },
+                "sharded": {
+                  "description": "Whether or not the keyspace modified by the deploy operation summary is sharded",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "state": {
+                  "description": "The state of the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "syntax_highlighted_ddl": {
+                  "description": "A syntax-highlighted DDL statement for the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "table_name": {
+                  "description": "The name of the table modifed by the deploy operation summary",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "table_recently_used": {
+                  "description": "Whether or not the table modified by the deploy operation summary was recently used",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "table_recently_used_at": {
+                  "description": "When the table modified by the deploy operation summary was last used",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "throttled_at": {
+                  "description": "When the deploy operation summary was last throttled",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "created_at",
+                "deploy_errors",
+                "ddl_statement",
+                "eta_seconds",
+                "keyspace_name",
+                "operation_name",
+                "progress_percentage",
+                "state",
+                "syntax_highlighted_ddl",
+                "table_name",
+                "table_recently_used_at",
+                "throttled_at",
+                "removed_foreign_key_names",
+                "shard_count",
+                "shard_names",
+                "can_drop_data",
+                "table_recently_used",
+                "sharded",
+                "operations"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "deploy_operations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "can_drop_data": {
+                  "description": "Whether or not the deploy operation is capable of dropping data",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "created_at": {
+                  "description": "When the deploy operation was created",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ddl_statement": {
+                  "description": "The DDL statement for the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "deploy_error_docs_url": {
+                  "description": "A link to documentation explaining the deploy error, if present",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "deploy_errors": {
+                  "description": "Deploy errors for the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "eta_seconds": {
+                  "description": "The estimated seconds until completion for the deploy operation",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "description": "The ID for the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "keyspace_name": {
+                  "description": "The keyspace modified by the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "operation_name": {
+                  "description": "The operation name of the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "progress_percentage": {
+                  "description": "The percent completion for the deploy operation",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "removed_foreign_key_names": {
+                  "description": "Names of foreign keys removed by this operation",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                },
+                "state": {
+                  "description": "The state of the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "syntax_highlighted_ddl": {
+                  "description": "A syntax-highlighted DDL statement for the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "table_locked": {
+                  "description": "Whether or not the table modified by the deploy operation is currently locked",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "table_name": {
+                  "description": "The name of the table modifed by the deploy operation",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "table_recently_used": {
+                  "description": "Whether or not the table modified by the deploy operation was recently used",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "table_recently_used_at": {
+                  "description": "When the table modified by the deploy operation was last used",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "throttled_at": {
+                  "description": "When the deploy operation was last throttled",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "updated_at": {
+                  "description": "When the deploy operation was last updated",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "state",
+                "keyspace_name",
+                "table_name",
+                "operation_name",
+                "eta_seconds",
+                "progress_percentage",
+                "deploy_error_docs_url",
+                "ddl_statement",
+                "syntax_highlighted_ddl",
+                "created_at",
+                "updated_at",
+                "throttled_at",
+                "can_drop_data",
+                "table_locked",
+                "table_recently_used",
+                "table_recently_used_at",
+                "removed_foreign_key_names",
+                "deploy_errors"
+              ],
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "deploy_request_number": {
+            "description": "The number of the deploy request associated with this deployment",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "deployable": {
+            "description": "Whether the deployment is deployable",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "deployment_revert_request": {
+            "additionalProperties": true,
+            "description": "The request to revert the schema operations in this deployment",
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "finished_at": {
+            "description": "When the deployment was finished",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the deployment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "instant_ddl": {
+            "description": "Whether or not the deployment is an instant DDL deployment",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "instant_ddl_eligible": {
+            "description": "Whether or not the deployment is eligible for instant DDL",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "into_branch": {
+            "description": "The name of the base branch the deployment will be merged into",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lint_errors": {
+            "description": "Schema lint errors preventing the deployment from completing",
+            "items": {
+              "additionalProperties": true,
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "locked_table_name": {
+            "description": "The name of he table that is locked by the deployment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lookup_vindex_operations": {
+            "description": "Lookup Vitess index operations",
+            "items": {
+              "additionalProperties": true,
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "preceding_deployments": {
+            "description": "The deployments ahead of this one in the queue",
+            "items": {
+              "additionalProperties": true,
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "queued_at": {
+            "description": "When the deployment was queued",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ready_to_cutover_at": {
+            "description": "When the deployment was ready for cutover",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "schema_last_updated_at": {
+            "description": "When the schema was last updated for the deployment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sequential_diff_dependencies": {
+            "description": "The schema dependencies that must be satisfied",
+            "items": {
+              "additionalProperties": true,
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "started_at": {
+            "description": "When the deployment was started",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "description": "The state the deployment is in",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "submitted_at": {
+            "description": "When the deployment was submitted",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "table_locked": {
+            "description": "Whether or not the deployment has a table locked",
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "throttler_configurations": {
+            "description": "Deployment throttling configurations",
+            "items": {
+              "additionalProperties": true,
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "description": "When the deployment was last updated",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "auto_cutover",
+          "auto_delete_branch",
+          "created_at",
+          "cutover_at",
+          "cutover_expiring",
+          "deploy_check_errors",
+          "finished_at",
+          "queued_at",
+          "ready_to_cutover_at",
+          "started_at",
+          "state",
+          "submitted_at",
+          "updated_at",
+          "into_branch",
+          "deploy_request_number",
+          "deployable",
+          "preceding_deployments",
+          "deploy_operations",
+          "deploy_operation_summaries",
+          "lint_errors",
+          "sequential_diff_dependencies",
+          "lookup_vindex_operations",
+          "throttler_configurations",
+          "deployment_revert_request",
+          "actor",
+          "cutover_actor",
+          "cancelled_actor",
+          "schema_last_updated_at",
+          "table_locked",
+          "locked_table_name",
+          "instant_ddl",
+          "instant_ddl_eligible"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "deployment_state": {
+        "description": "The deployment state of the deploy request",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "html_body": {
+        "description": "The HTML body of the deploy request",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "html_url": {
+        "description": "The PlanetScale app address for the deploy request",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the deploy request",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "into_branch": {
+        "description": "The name of the branch the deploy request will be merged into",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "into_branch_shard_count": {
+        "description": "The number of shards the branch the deploy request will be merged into has",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "into_branch_sharded": {
+        "description": "Whether or not the branch the deploy request will be merged into is sharded",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "notes": {
+        "description": "Notes on the deploy request",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "num_comments": {
+        "description": "The number of comments on the deploy request",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "number": {
+        "description": "The number of the deploy request",
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "Whether the deploy request is open or closed",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the deploy request was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "number",
+      "actor",
+      "closed_by",
+      "branch",
+      "branch_id",
+      "branch_deleted",
+      "branch_deleted_by",
+      "branch_deleted_at",
+      "into_branch",
+      "into_branch_sharded",
+      "into_branch_shard_count",
+      "approved",
+      "state",
+      "deployment_state",
+      "deployment",
+      "num_comments",
+      "html_url",
+      "notes",
+      "html_body",
+      "created_at",
+      "updated_at",
+      "closed_at",
+      "deployed_at"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "deploy_requests",
+  "tap_stream_id": "deploy_requests"
+}

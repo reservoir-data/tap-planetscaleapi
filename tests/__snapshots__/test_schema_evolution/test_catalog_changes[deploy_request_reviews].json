@@ -1,0 +1,212 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "body"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "html_body"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "actor",
+        "properties",
+        "avatar_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "actor": {
+        "additionalProperties": false,
+        "properties": {
+          "avatar_url": {
+            "description": "The URL of the actor's avatar",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "The name of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The ID of the actor",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "avatar_url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "body": {
+        "description": "The text body of the review",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "When the review was created",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "html_body": {
+        "description": "The HTML body of the review",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID of the review",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "Whether the review is a comment or approval",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "When the review was last updated",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "body",
+      "html_body",
+      "state",
+      "created_at",
+      "updated_at",
+      "actor"
+    ],
+    "type": [
+      "object",
+      "null"
+    ]
+  },
+  "stream": "deploy_request_reviews",
+  "tap_stream_id": "deploy_request_reviews"
+}
