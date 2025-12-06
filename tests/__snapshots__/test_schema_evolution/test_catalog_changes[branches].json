@@ -530,7 +530,7 @@
       "cluster_iops": {
         "description": "IOPS for the cluster",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -813,7 +813,7 @@
       "shard_count": {
         "description": "The number of shards in the branch",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -855,7 +855,7 @@
       "vtgate_count": {
         "description": "The number of vtgate instances in the branch",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },

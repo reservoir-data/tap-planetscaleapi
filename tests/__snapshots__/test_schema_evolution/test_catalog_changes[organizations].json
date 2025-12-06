@@ -216,7 +216,7 @@
       "database_count": {
         "description": "The number of databases in the organization",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -266,7 +266,7 @@
       "keyspace_shard_limit": {
         "description": "The keyspace shard limit for the organization",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
