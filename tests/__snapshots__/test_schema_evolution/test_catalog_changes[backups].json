@@ -564,7 +564,7 @@
           "frequency_value": {
             "description": "A number value for the frequency of the backup policy",
             "type": [
-              "number",
+              "integer",
               "null"
             ]
           },
@@ -613,14 +613,14 @@
           "retention_value": {
             "description": "A number value for the retention period of the backup policy",
             "type": [
-              "number",
+              "integer",
               "null"
             ]
           },
           "schedule_day": {
             "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday",
             "type": [
-              "number",
+              "integer",
               "null"
             ]
           },
@@ -634,7 +634,7 @@
           "schedule_week": {
             "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week",
             "type": [
-              "number",
+              "integer",
               "null"
             ]
           },
@@ -785,7 +785,7 @@
       "pvc_size": {
         "description": "Size of the PVC used for the backup",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -915,7 +915,7 @@
       "size": {
         "description": "The size of the backup in bytes",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
