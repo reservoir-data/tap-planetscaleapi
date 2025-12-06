@@ -1160,7 +1160,7 @@
                 "eta_seconds": {
                   "description": "The estimated seconds until completion for the deploy operation summary",
                   "type": [
-                    "number",
+                    "integer",
                     "null"
                   ]
                 },
@@ -1192,7 +1192,7 @@
                       "eta_seconds": {
                         "description": "The estimated seconds until completion for the deploy operation",
                         "type": [
-                          "number",
+                          "integer",
                           "null"
                         ]
                       },
@@ -1262,7 +1262,7 @@
                 "shard_count": {
                   "description": "The number of shards in the keyspace modified by the deploy operation summary",
                   "type": [
-                    "number",
+                    "integer",
                     "null"
                   ]
                 },
@@ -1533,7 +1533,7 @@
           "deploy_request_number": {
             "description": "The number of the deploy request associated with this deployment",
             "type": [
-              "number",
+              "integer",
               "null"
             ]
           },
@@ -1799,7 +1799,7 @@
       "into_branch_shard_count": {
         "description": "The number of shards the branch the deploy request will be merged into has",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -1820,14 +1820,14 @@
       "num_comments": {
         "description": "The number of comments on the deploy request",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
       "number": {
         "description": "The number of the deploy request",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },

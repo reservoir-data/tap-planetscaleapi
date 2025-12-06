@@ -583,7 +583,7 @@
       "branches_count": {
         "description": "The total number of database branches",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -624,7 +624,7 @@
               "port": {
                 "description": "Port of the data source",
                 "type": [
-                  "number",
+                  "integer",
                   "null"
                 ]
               }
@@ -690,28 +690,28 @@
       "default_branch_read_only_regions_count": {
         "description": "Number of read only regions in the default branch",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
       "default_branch_shard_count": {
         "description": "Number of shards in the default branch",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
       "default_branch_table_count": {
         "description": "Number of tables in the default branch schema",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
       "development_branches_count": {
         "description": "The total number of database development branches",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -753,7 +753,7 @@
       "issues_count": {
         "description": "The total number of ongoing issues within a database",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -795,7 +795,7 @@
       "open_schema_recommendations_count": {
         "description": "The total number of schema recommendations",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
@@ -816,7 +816,7 @@
       "production_branches_count": {
         "description": "The total number of database production branches",
         "type": [
-          "number",
+          "integer",
           "null"
         ]
       },
