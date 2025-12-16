@@ -3,17 +3,23 @@
 # tap-planetscaleapi
 
 <div>
-  <a href="https://pypi.org/p/tap-planetscaleapi/">
-    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/tap-planetscaleapi">
+  <a href="https://github.com/reservoir-data/tap-planetscaleapi/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-planetscaleapi"/>
   </a>
   <a href="https://results.pre-commit.ci/latest/github/reservoir-data/tap-planetscaleapi/main">
     <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/reservoir-data/tap-planetscaleapi/main.svg"/>
   </a>
-  <a href="https://github.com/reservoir-data/tap-planetscaleapi/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-planetscaleapi"/>
+  <a href="https://scientific-python.org/specs/spec-0000/">
+    <img alt="SPEC 0 — Minimum Supported Dependencies" src="https://img.shields.io/badge/SPEC-0-green"/>
   </a>
   <a href="https://github.com/astral-sh/ruff">
     <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="Ruff" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/astral-sh/uv">
+   <img alt="uv" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json"/>
+  </a>
+  <a href="https://pypi.org/p/tap-planetscaleapi/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/tap-planetscaleapi">
   </a>
   <a href="https://pypi.org/p/tap-planetscaleapi/">
     <img alt="Python versions" src="https://img.shields.io/pypi/pyversions/tap-planetscaleapi"/>
@@ -42,36 +48,35 @@ pipx install git+https://github.com/reservoir-data/tap-planetscaleapi.git@main
 
 ## Capabilities
 
-* `catalog`
-* `state`
-* `discover`
-* `about`
-* `stream-maps`
-* `schema-flattening`
-* `batch`
-
+- `catalog`
+- `state`
+- `discover`
+- `activate-version`
+- `about`
+- `stream-maps`
+- `schema-flattening`
+- `batch`
+- `structured-logging`
 
 ## Settings
 
-| Setting             | Required | Default | Description |
-|:--------------------|:--------:|:-------:|:------------|
-| service_token_id    | True     | None    | The service token ID, visible on the service token page |
-| service_token       | True     | None    | The service token value |
-| stream_maps         | False    | None    | Config object for stream maps capability. For more information check out [Stream Maps](https://sdk.meltano.com/en/latest/stream_maps.html). |
-| stream_map_config   | False    | None    | User-defined config values to be used within map expressions. |
-| flattening_enabled  | False    | None    | 'True' to enable schema flattening and automatically expand nested properties. |
-| flattening_max_depth| False    | None    | The max depth to flatten schemas. |
-| batch_config        | False    | None    |             |
+| Setting              | Required | Default | Description                                                                                                                                 |
+| :------------------- | :------: | :-----: | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| service_token_id     |   True   |  None   | The service token ID, visible on the service token page                                                                                     |
+| service_token        |   True   |  None   | The service token value                                                                                                                     |
+| stream_maps          |  False   |  None   | Config object for stream maps capability. For more information check out [Stream Maps](https://sdk.meltano.com/en/latest/stream_maps.html). |
+| stream_map_config    |  False   |  None   | User-defined config values to be used within map expressions.                                                                               |
+| flattening_enabled   |  False   |  None   | 'True' to enable schema flattening and automatically expand nested properties.                                                              |
+| flattening_max_depth |  False   |  None   | The max depth to flatten schemas.                                                                                                           |
+| batch_config         |  False   |  None   |                                                                                                                                             |
 
 A full list of supported settings and capabilities is available by running: `tap-planetscaleapi --about`
 
 ## Supported Python Versions
 
-* 3.10
-* 3.11
-* 3.12
-* 3.13
-* 3.14
+- 3.12
+- 3.13
+- 3.14
 
 A full list of supported settings and capabilities for this tap is available by running:
 
@@ -113,7 +118,7 @@ uv sync
 ### Create and Run Tests
 
 Create tests within the `tests` subfolder and
-  then run:
+then run:
 
 ```bash
 uv run pytest
