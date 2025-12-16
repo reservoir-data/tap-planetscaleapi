@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import abc
-import sys
 import typing as t
 from importlib import resources
-from typing import cast
+from typing import cast, override
 
 from singer_sdk import OpenAPISchema, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
@@ -15,11 +14,6 @@ from singer_sdk.streams import RESTStream
 from toolz.dicttoolz import get_in
 
 from tap_planetscaleapi import openapi
-
-if sys.version_info >= (3, 12):
-    from typing import override
-else:
-    from typing_extensions import override
 
 if t.TYPE_CHECKING:
     from singer_sdk import Stream
