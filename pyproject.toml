@@ -58,6 +58,7 @@ module = [
 
 [tool.ruff]
 line-length = 140
+preview = true
 src = ["tap_planetscaleapi"]
 
 [tool.ruff.lint]
@@ -69,6 +70,10 @@ select = ["ALL"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101"]
+
+[tool.ruff.lint.flake8-copyright]
+author = "Edgar Ramírez-Mondragón"
+min-file-size = 1024  # Avoid enforcing a header on files smaller than 1024 bytes.
 
 [tool.ruff.lint.flake8-annotations]
 allow-star-arg-any = true

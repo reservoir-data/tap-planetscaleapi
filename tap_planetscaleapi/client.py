@@ -1,4 +1,7 @@
-"""REST client handling, including PlanetScaleAPIStream base class."""
+"""REST client handling, including PlanetScaleAPIStream base class.
+
+Copyright (c) 2025 Edgar Ramírez-Mondragón
+"""
 
 from __future__ import annotations
 
@@ -73,7 +76,7 @@ class SchemaFromPath(StreamSchema[StreamKey]):
         return self.schema_source.get_schema(key)
 
 
-class PlanetScaleAPIStream(RESTStream[int], metaclass=abc.ABCMeta):
+class PlanetScaleAPIStream(RESTStream[int], abc.ABC):
     """PlanetScaleAPI stream class."""
 
     # Class properties

@@ -1,4 +1,7 @@
-"""Pytest configuration."""
+"""Pytest configuration.
+
+Copyright (c) 2025 Edgar Ramírez-Mondragón
+"""
 
 import pytest
 
