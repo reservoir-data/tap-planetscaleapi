@@ -8,6 +8,10 @@ on:
 
 env:
   FORCE_COLOR: "1"
+  # renovate: datasource=pypi depName=llm
+  LLM_VERSION: 0.28
+  # renovate: datasource=pypi depName=llm-github-models
+  LLM_GITHUB_MODELS_VERSION: 0.18.0
   # renovate: datasource=pypi depName=uv
   UV_VERSION: 0.9.13
 
@@ -16,8 +20,9 @@ jobs:
     name: Update Catalog
     runs-on: ubuntu-24.04
     permissions:
-      contents: write
-      pull-requests: write
+      contents: write  # Required by peter-evans/create-pull-request
+      models: read  # Required by llm-github-models
+      pull-requests: write  # Required by peter-evans/create-pull-request
     steps:
     - uses: actions/create-github-app-token@7e473efe3cb98aa54f8d4bac15400b15fad77d94 # v2.2.0
       id: generate-token
@@ -33,10 +38,44 @@ jobs:
     - id: check_snapshot_changes
       continue-on-error: true
       run: git diff --quiet tests/__snapshots__
+    - name: Install LLM with GitHub Models
+      if: steps.check_snapshot_changes.outcome == 'failure'
+      run: uv tool install --with llm-github-models==${{ env.LLM_GITHUB_MODELS_VERSION }} --with llm==${{ env.LLM_VERSION }} llm
+    - name: Review catalog changes
+      if: steps.check_snapshot_changes.outcome == 'failure'
+      id: review-catalog-changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WORKSPACE_PATH: ${{ github.workspace }}
+      run: |
+        SYSTEM_PROMPT=$(cat $WORKSPACE_PATH/.github/prompts/update_catalog_prompt.txt)
+        GENERATED_CONTENT=$(git --no-pager diff -p --no-color HEAD tests/__snapshots__ | llm prompt -m github/gpt-4o-mini -s "$SYSTEM_PROMPT")
+
+        PR_TITLE=$(echo "$GENERATED_CONTENT" | head -n 1)
+        PR_BODY=$(echo "$GENERATED_CONTENT" | tail -n +3)
+
+        {
+            echo 'title<<EOF'
+            echo "$PR_TITLE"
+            echo 'EOF'
+        } >> "$GITHUB_OUTPUT"
+
+        {
+            echo 'body<<EOF'
+            echo "$PR_BODY"
+            echo 'EOF'
+        } >> "$GITHUB_OUTPUT"
+
+        {
+            echo 'commit_message<<EOF'
+            echo "$PR_TITLE"
+            echo 'EOF'
+        } >> "$GITHUB_OUTPUT"
     - uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
       if: steps.check_snapshot_changes.outcome == 'failure'
       with:
-        title: 'fix: Update catalog'
-        commit-message: 'fix: Update catalog'
+        title: ${{ steps.review-catalog-changes.outputs.title }}
+        commit-message: ${{ steps.review-catalog-changes.outputs.commit_message }}
+        body: ${{ steps.review-catalog-changes.outputs.body }}
         token: ${{ steps.generate-token.outputs.token }}
         signoff: true

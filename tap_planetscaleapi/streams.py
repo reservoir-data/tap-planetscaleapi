@@ -1,4 +1,7 @@
-"""Stream type classes for tap-planetscaleapi."""
+"""Stream type classes for tap-planetscaleapi.
+
+Copyright (c) 2025 Edgar Ramírez-Mondragón
+"""
 
 from __future__ import annotations
 
