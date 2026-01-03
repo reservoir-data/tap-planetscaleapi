@@ -5,13 +5,12 @@ Copyright (c) 2025 Edgar Ramírez-Mondragón
 
 from __future__ import annotations
 
-import typing as t
-from typing import override
+from typing import TYPE_CHECKING, override
 
 from tap_planetscaleapi.client import PlanetScaleAPIStream
 
-if t.TYPE_CHECKING:
-    from singer_sdk.helpers.types import Context
+if TYPE_CHECKING:
+    from singer_sdk.helpers.types import Context, Record
 
 
 class OrganizationsStream(PlanetScaleAPIStream):
@@ -23,14 +22,14 @@ class OrganizationsStream(PlanetScaleAPIStream):
     replication_key = None
 
     @override
-    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
+    def get_child_context(self, record: Record, context: Context | None) -> Context | None:
         return {
             "organization_id": record["id"],
             "organization_name": record["name"],
         }
 
     @override
-    def post_process(self, row: dict, context: Context | None = None) -> dict | None:
+    def post_process(self, row: Record, context: Context | None = None) -> Record | None:
         row["invoice_budget_amount"] = float(row["invoice_budget_amount"])
         return row
 
@@ -59,7 +58,7 @@ class DatabasesStream(PlanetScaleAPIStream):
     spec_path = "/organizations/{organization}/databases"
 
     @override
-    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
+    def get_child_context(self, record: Record, context: Context | None) -> Context | None:
         return {
             "database_id": record["id"],
             "database_name": record["name"],
@@ -104,7 +103,7 @@ class BranchesStream(PlanetScaleAPIStream):
     spec_path = "/organizations/{organization}/databases/{database}/branches"
 
     @override
-    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
+    def get_child_context(self, record: Record, context: Context | None) -> Context | None:
         return {
             "branch_id": record["id"],
             "branch_name": record["name"],
@@ -163,7 +162,7 @@ class DeployRequestsStream(PlanetScaleAPIStream):
     spec_path = "/organizations/{organization}/databases/{database}/deploy-requests"
 
     @override
-    def get_child_context(self, record: dict, context: Context | None) -> dict | None:
+    def get_child_context(self, record: Record, context: Context | None) -> Context | None:
         return {
             "deploy_request_id": record["id"],
             "deploy_request_number": record["number"],

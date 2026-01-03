@@ -48,7 +48,19 @@ dev = [
 ]
 
 [tool.mypy]
+enable_error_code = [
+  "ignore-without-code",
+  "redundant-expr",
+  "truthy-bool",
+]
+follow_untyped_imports = true
+strict = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
 warn_unused_configs = true
+warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
@@ -92,14 +104,21 @@ requires = [
 build-backend = "hatchling.build"
 
 [tool.pytest]
+addopts = [
+  "-ra",
+  "--strict-config",
+  "--strict-markers",
+]
+log_level = "INFO"
 minversion = "9.0"
 filterwarnings = [
     "error",
     "default:Fields in transformed catalog but not in records:UserWarning",
     "ignore:No records returned in stream:UserWarning",
     "ignore:No records were available to test:UserWarning",
-    "default:'asyncio.iscoroutinefunction' is deprecated:DeprecationWarning",
-    "default:'_UnionGenericAlias' is deprecated and slated for removal in Python 3.17:DeprecationWarning",
+]
+testpaths = [
+  "tests",
 ]
 xfail_strict = true
 
