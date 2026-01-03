@@ -6,9 +6,8 @@ Copyright (c) 2025 Edgar Ramírez-Mondragón
 from __future__ import annotations
 
 import abc
-import typing as t
 from importlib import resources
-from typing import cast, override
+from typing import TYPE_CHECKING, Any, NamedTuple, cast, override
 
 from singer_sdk import OpenAPISchema, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
@@ -18,12 +17,12 @@ from toolz.dicttoolz import get_in
 
 from tap_planetscaleapi import openapi
 
-if t.TYPE_CHECKING:
+if TYPE_CHECKING:
     from singer_sdk import Stream
     from singer_sdk.helpers.types import Context
 
 
-class StreamKey(t.NamedTuple):
+class StreamKey(NamedTuple):
     """A key for a stream in the OpenAPI spec."""
 
     path: str
@@ -35,8 +34,8 @@ class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
     """OpenAPI source for PlanetScale API."""
 
     @override
-    def get_unresolved_schema(self, key: StreamKey) -> dict[str, t.Any]:
-        return get_in(
+    def get_unresolved_schema(self, key: StreamKey) -> dict[str, Any]:
+        return get_in(  # type: ignore[no-any-return,no-untyped-call]
             [
                 "paths",
                 key.path,
@@ -49,13 +48,13 @@ class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
         )
 
     @override
-    def fetch_schema(self, key: StreamKey) -> dict[str, t.Any]:
+    def fetch_schema(self, key: StreamKey) -> dict[str, Any]:
         from tap_planetscaleapi import streams  # noqa: PLC0415
 
         schema = super().fetch_schema(key)["properties"]["data"]["items"]
         if key.path == streams.BackupsStream.spec_path:
             schema["properties"]["deleted_at"]["type"] = ["string", "null"]
-        return schema
+        return schema  # type: ignore[no-any-return]
 
 
 class SchemaFromPath(StreamSchema[StreamKey]):
@@ -64,9 +63,9 @@ class SchemaFromPath(StreamSchema[StreamKey]):
     @override
     def get_stream_schema(
         self,
-        stream: Stream,  # type: ignore[override]
-        stream_class: type[Stream],  # type: ignore[override]
-    ) -> dict[str, t.Any]:
+        stream: Stream,
+        stream_class: type[Stream],
+    ) -> dict[str, Any]:
         stream = cast("PlanetScaleAPIStream", stream)
         key = StreamKey(
             path=stream.spec_path or stream.path,
@@ -87,7 +86,7 @@ class PlanetScaleAPIStream(RESTStream[int], abc.ABC):
     #: `path` attribute is used.
     spec_path: str | None = None
 
-    schema = SchemaFromPath(PlanetScaleOpenAPISource(resources.files(openapi) / "openapi.json"))  # type: ignore[assignment]
+    schema = SchemaFromPath(PlanetScaleOpenAPISource(resources.files(openapi) / "openapi.json"))
 
     @property
     @override
@@ -103,7 +102,7 @@ class PlanetScaleAPIStream(RESTStream[int], abc.ABC):
 
     @property
     @override
-    def http_headers(self) -> dict:
+    def http_headers(self) -> dict[str, str]:
         return {
             "accept": "application/json",
             "user-agent": self.user_agent,
@@ -114,8 +113,8 @@ class PlanetScaleAPIStream(RESTStream[int], abc.ABC):
         return BasePageNumberPaginator(1)
 
     @override
-    def get_url_params(self, context: Context | None, next_page_token: t.Any | None) -> dict[str, t.Any]:
-        params: dict[str, t.Any] = {"per_page": self.PAGE_SIZE}
+    def get_url_params(self, context: Context | None, next_page_token: Any | None) -> dict[str, Any]:
+        params: dict[str, Any] = {"per_page": self.PAGE_SIZE}
         if next_page_token:
             params["page"] = next_page_token
 
