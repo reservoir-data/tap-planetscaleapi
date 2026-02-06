@@ -7,6 +7,8 @@ jobs:
   build:
     name: Build Wheel and SDist
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
     outputs:
       name: ${{ steps.baipp.outputs.package_name }}
       version: ${{ steps.baipp.outputs.package_version }}
