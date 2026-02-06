@@ -2,6 +2,9 @@
 
 name: Test tap-planetscaleapi
 
+permissions:
+  contents: read
+
 on:
   push:
     branches: [main]
