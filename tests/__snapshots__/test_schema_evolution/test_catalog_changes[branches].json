@@ -477,6 +477,15 @@
       }
     },
     {
+      "breadcrumb": [
+        "properties",
+        "vtgate_options"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
       "breadcrumb": [],
       "metadata": {
         "inclusion": "available",
@@ -859,6 +868,14 @@
           "null"
         ]
       },
+      "vtgate_options": {
+        "additionalProperties": true,
+        "description": "VTGate configuration options",
+        "type": [
+          "object",
+          "null"
+        ]
+      },
       "vtgate_size": {
         "description": "The size of the vtgate cluster for the branch",
         "type": [
@@ -900,7 +917,8 @@
       "html_url",
       "url",
       "region",
-      "parent_branch"
+      "parent_branch",
+      "vtgate_options"
     ],
     "type": [
       "object",
