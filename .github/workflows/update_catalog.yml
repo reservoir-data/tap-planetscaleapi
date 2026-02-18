@@ -78,4 +78,5 @@ jobs:
         commit-message: ${{ steps.review-catalog-changes.outputs.commit_message }}
         body: ${{ steps.review-catalog-changes.outputs.body }}
         token: ${{ steps.generate-token.outputs.token }}
+        sign-commits: true
         signoff: true
