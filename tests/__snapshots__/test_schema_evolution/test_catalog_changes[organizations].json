@@ -259,7 +259,7 @@
       "invoice_budget_amount": {
         "description": "The expected monthly budget for the organization",
         "type": [
-          "number",
+          "string",
           "null"
         ]
       },
