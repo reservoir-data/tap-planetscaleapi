@@ -12264,6 +12264,10 @@
                 "type": "boolean",
                 "description": "Is the keyspace awaiting a resize"
               },
+              "config_change_in_progress": {
+                "type": "boolean",
+                "description": "Is the keyspace undergoing a config change"
+              },
               "ready": {
                 "type": "boolean",
                 "description": "Is the keyspace provisioned and serving traffic"
@@ -12359,6 +12363,7 @@
               "cluster_display_name",
               "resizing",
               "resize_pending",
+              "config_change_in_progress",
               "ready",
               "metal",
               "default",
@@ -12433,6 +12438,10 @@
         "resize_pending": {
           "type": "boolean",
           "description": "Is the keyspace awaiting a resize"
+        },
+        "config_change_in_progress": {
+          "type": "boolean",
+          "description": "Is the keyspace undergoing a config change"
         },
         "ready": {
           "type": "boolean",
@@ -12529,6 +12538,7 @@
         "cluster_display_name",
         "resizing",
         "resize_pending",
+        "config_change_in_progress",
         "ready",
         "metal",
         "default",
@@ -13443,6 +13453,14 @@
                 "type": "boolean",
                 "description": "True if a branch has a queued resize request"
               },
+              "config_changing": {
+                "type": "boolean",
+                "description": "True if a config change is in progress"
+              },
+              "config_change_queued": {
+                "type": "boolean",
+                "description": "True if a config change is queued for maintenance window"
+              },
               "allow_data_branching": {
                 "type": "boolean",
                 "description": "Whether seeding branches with data is enabled for all branches"
@@ -13531,6 +13549,8 @@
               "require_approval_for_deploy",
               "resizing",
               "resize_queued",
+              "config_changing",
+              "config_change_queued",
               "allow_data_branching",
               "foreign_keys_enabled",
               "automatic_migrations",
@@ -13766,6 +13786,14 @@
           "type": "boolean",
           "description": "True if a branch has a queued resize request"
         },
+        "config_changing": {
+          "type": "boolean",
+          "description": "True if a config change is in progress"
+        },
+        "config_change_queued": {
+          "type": "boolean",
+          "description": "True if a config change is queued for maintenance window"
+        },
         "allow_data_branching": {
           "type": "boolean",
           "description": "Whether seeding branches with data is enabled for all branches"
@@ -13854,6 +13882,8 @@
         "require_approval_for_deploy",
         "resizing",
         "resize_queued",
+        "config_changing",
+        "config_change_queued",
         "allow_data_branching",
         "foreign_keys_enabled",
         "automatic_migrations",
@@ -14256,6 +14286,10 @@
                 "type": "boolean",
                 "description": "Whether the OAuth application was created via Dynamic Client Registration"
               },
+              "single_org_authorization": {
+                "type": "boolean",
+                "description": "Whether the OAuth application is limited to authorizing a single organization"
+              },
               "scopes_by_resource": {
                 "type": "object",
                 "additionalProperties": true,
@@ -14280,6 +14314,7 @@
               "client_id",
               "tokens",
               "dcr",
+              "single_org_authorization",
               "scopes_by_resource",
               "all_scopes_by_resource"
             ]
@@ -14346,6 +14381,10 @@
           "type": "boolean",
           "description": "Whether the OAuth application was created via Dynamic Client Registration"
         },
+        "single_org_authorization": {
+          "type": "boolean",
+          "description": "Whether the OAuth application is limited to authorizing a single organization"
+        },
         "scopes_by_resource": {
           "type": "object",
           "additionalProperties": true,
@@ -14370,6 +14409,7 @@
         "client_id",
         "tokens",
         "dcr",
+        "single_org_authorization",
         "scopes_by_resource",
         "all_scopes_by_resource"
       ]
