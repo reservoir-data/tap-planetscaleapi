@@ -413,6 +413,24 @@
     {
       "breadcrumb": [
         "properties",
+        "config_changing"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "config_change_queued"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "allow_data_branching"
       ],
       "metadata": {
@@ -591,6 +609,20 @@
         "description": "The URL to retrieve this database's branches via the API",
         "type": [
           "string",
+          "null"
+        ]
+      },
+      "config_change_queued": {
+        "description": "True if a config change is queued for maintenance window",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "config_changing": {
+        "description": "True if a config change is in progress",
+        "type": [
+          "boolean",
           "null"
         ]
       },
@@ -995,6 +1027,8 @@
       "require_approval_for_deploy",
       "resizing",
       "resize_queued",
+      "config_changing",
+      "config_change_queued",
       "allow_data_branching",
       "foreign_keys_enabled",
       "automatic_migrations",
