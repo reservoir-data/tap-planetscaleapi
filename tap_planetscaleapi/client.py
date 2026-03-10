@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING, Any, NamedTuple, cast, override
 
 from singer_sdk import OpenAPISchema, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
-from singer_sdk.pagination import BasePageNumberPaginator
+from singer_sdk.pagination import PageNumberPaginator
 from singer_sdk.streams import RESTStream
 from toolz.dicttoolz import get_in
 
@@ -109,8 +109,8 @@ class PlanetScaleAPIStream(RESTStream[int], abc.ABC):
         }
 
     @override
-    def get_new_paginator(self) -> BasePageNumberPaginator:
-        return BasePageNumberPaginator(1)
+    def get_new_paginator(self) -> PageNumberPaginator:
+        return PageNumberPaginator(1)
 
     @override
     def get_url_params(self, context: Context | None, next_page_token: Any | None) -> dict[str, Any]:
