@@ -205,6 +205,17 @@
         "properties",
         "backup_policy",
         "properties",
+        "display_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "backup_policy",
+        "properties",
         "name"
       ],
       "metadata": {
@@ -554,6 +565,13 @@
               "null"
             ]
           },
+          "display_name": {
+            "description": "The display name of the backup policy",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "frequency_unit": {
             "description": "The unit for the frequency of the backup policy",
             "type": [
@@ -655,6 +673,7 @@
         },
         "required": [
           "id",
+          "display_name",
           "name",
           "target",
           "retention_value",
