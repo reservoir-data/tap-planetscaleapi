@@ -184,6 +184,25 @@
             "in": "path",
             "required": true,
             "description": "The name of the organization"
+          },
+          {
+            "name": "starting_after",
+            "type": "string",
+            "in": "query",
+            "description": "If provided, returns results after the specified cursor"
+          },
+          {
+            "name": "ending_before",
+            "type": "string",
+            "in": "query",
+            "description": "If provided, returns results before the specified cursor"
+          },
+          {
+            "name": "limit",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results (max 100)"
           }
         ],
         "responses": {
@@ -619,6 +638,408 @@
           }
         },
         "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `delete_database`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `delete_databases` |\n| Database | `delete_database` |"
+      }
+    },
+    "/organizations/{organization}/databases/{database}/backup-policies": {
+      "get": {
+        "tags": [
+          "BackupPolicies"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "list_backup_policies",
+        "summary": "List backup policies",
+        "parameters": [
+          {
+            "name": "organization",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Organization name slug from `list_organizations`. Example: `acme`."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Database name slug from `list_databases`. Example: `app-db`."
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Returns backup policies for the database",
+            "schema": {
+              "$ref": "#/definitions/PaginatedBackupPolicy"
+            },
+            "headers": {}
+          }
+        },
+        "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `read_backups`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `read_backups` |\n| Database | `read_backups` |"
+      },
+      "post": {
+        "tags": [
+          "BackupPolicies"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "create_backup_policy",
+        "summary": "Create a backup policy",
+        "parameters": [
+          {
+            "name": "organization",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Organization name slug from `list_organizations`. Example: `acme`."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Database name slug from `list_databases`. Example: `app-db`."
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the backup policy"
+                },
+                "target": {
+                  "type": "string",
+                  "enum": [
+                    "production",
+                    "development"
+                  ],
+                  "description": "Whether the policy is for production or development branches"
+                },
+                "retention_value": {
+                  "type": "integer",
+                  "description": "A number value for the retention period of the backup policy"
+                },
+                "retention_unit": {
+                  "type": "string",
+                  "enum": [
+                    "hour",
+                    "day",
+                    "week",
+                    "month",
+                    "year"
+                  ],
+                  "description": "The unit for the retention period of the backup policy"
+                },
+                "frequency_value": {
+                  "type": "integer",
+                  "description": "A number value for the frequency of the backup policy"
+                },
+                "frequency_unit": {
+                  "type": "string",
+                  "enum": [
+                    "hour",
+                    "day",
+                    "week",
+                    "month"
+                  ],
+                  "description": "The unit for the frequency of the backup policy"
+                },
+                "schedule_time": {
+                  "type": "string",
+                  "description": "The time of day that the backup is scheduled, in HH:MM format"
+                },
+                "schedule_day": {
+                  "type": "integer",
+                  "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday"
+                },
+                "schedule_week": {
+                  "type": "integer",
+                  "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "201": {
+            "description": "Returns the created backup policy",
+            "schema": {
+              "$ref": "#/definitions/BackupPolicy"
+            },
+            "headers": {}
+          }
+        },
+        "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `write_backups`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `write_backups` |\n| Database | `write_backups` |"
+      }
+    },
+    "/organizations/{organization}/databases/{database}/backup-policies/{id}": {
+      "get": {
+        "tags": [
+          "BackupPolicies"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "get_backup_policy",
+        "summary": "Get a backup policy",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the backup policy"
+          },
+          {
+            "name": "organization",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Organization name slug from `list_organizations`. Example: `acme`."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Database name slug from `list_databases`. Example: `app-db`."
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Returns a backup policy",
+            "schema": {
+              "$ref": "#/definitions/BackupPolicy"
+            },
+            "headers": {}
+          }
+        },
+        "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `read_backups`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `read_backups` |\n| Database | `read_backups` |"
+      },
+      "patch": {
+        "tags": [
+          "BackupPolicies"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "update_backup_policy",
+        "summary": "Update a backup policy",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the backup policy"
+          },
+          {
+            "name": "organization",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Organization name slug from `list_organizations`. Example: `acme`."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Database name slug from `list_databases`. Example: `app-db`."
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the backup policy"
+                },
+                "target": {
+                  "type": "string",
+                  "enum": [
+                    "production",
+                    "development"
+                  ],
+                  "description": "Whether the policy is for production or development branches"
+                },
+                "retention_value": {
+                  "type": "integer",
+                  "description": "A number value for the retention period of the backup policy"
+                },
+                "retention_unit": {
+                  "type": "string",
+                  "enum": [
+                    "hour",
+                    "day",
+                    "week",
+                    "month",
+                    "year"
+                  ],
+                  "description": "The unit for the retention period of the backup policy"
+                },
+                "frequency_value": {
+                  "type": "integer",
+                  "description": "A number value for the frequency of the backup policy"
+                },
+                "frequency_unit": {
+                  "type": "string",
+                  "enum": [
+                    "hour",
+                    "day",
+                    "week",
+                    "month"
+                  ],
+                  "description": "The unit for the frequency of the backup policy"
+                },
+                "schedule_time": {
+                  "type": "string",
+                  "description": "The time of day that the backup is scheduled, in HH:MM format"
+                },
+                "schedule_day": {
+                  "type": "integer",
+                  "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday"
+                },
+                "schedule_week": {
+                  "type": "integer",
+                  "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Returns the updated backup policy",
+            "schema": {
+              "$ref": "#/definitions/BackupPolicy"
+            },
+            "headers": {}
+          }
+        },
+        "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `write_backups`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `write_backups` |\n| Database | `write_backups` |"
+      },
+      "delete": {
+        "tags": [
+          "BackupPolicies"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "delete_backup_policy",
+        "summary": "Delete a backup policy",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the backup policy"
+          },
+          {
+            "name": "organization",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Organization name slug from `list_organizations`. Example: `acme`."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Database name slug from `list_databases`. Example: `app-db`."
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "204": {
+            "description": "Returns no content",
+            "headers": {}
+          }
+        },
+        "description": "\n### Authorization\nA service token or OAuth token must have at least one of the following access or scopes in order to use this API endpoint:\n\n**Service Token Accesses**\n `write_backups`\n\n**OAuth Scopes**\n\n | Resource | Scopes |\n| :------- | :---------- |\n| Organization | `write_backups` |\n| Database | `write_backups` |"
       }
     },
     "/organizations/{organization}/databases/{database}/branches": {
@@ -3585,6 +4006,25 @@
             "in": "path",
             "required": true,
             "description": "The name of the branch"
+          },
+          {
+            "name": "starting_after",
+            "type": "string",
+            "in": "query",
+            "description": "If provided, returns results after the specified cursor"
+          },
+          {
+            "name": "ending_before",
+            "type": "string",
+            "in": "query",
+            "description": "If provided, returns results before the specified cursor"
+          },
+          {
+            "name": "limit",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results (max 100)"
           }
         ],
         "responses": {
@@ -5274,6 +5714,20 @@
             "in": "path",
             "required": true,
             "description": "The name of the deploy request's database"
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
           }
         ],
         "responses": {
@@ -6205,6 +6659,20 @@
             "in": "path",
             "required": true,
             "description": "The number of the deploy request"
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
           }
         ],
         "responses": {
@@ -6660,6 +7128,20 @@
             ],
             "in": "query",
             "description": "Filter by recommendation state"
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
           }
         ],
         "responses": {
@@ -9131,6 +9613,20 @@
             "type": "string",
             "in": "query",
             "description": "Search term to filter teams by name"
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
           }
         ],
         "responses": {
@@ -9434,6 +9930,20 @@
             "in": "path",
             "required": true,
             "description": "The slug of the team"
+          },
+          {
+            "name": "page",
+            "type": "integer",
+            "in": "query",
+            "default": 1,
+            "description": "If provided, specifies the page offset of returned results"
+          },
+          {
+            "name": "per_page",
+            "type": "integer",
+            "in": "query",
+            "default": 25,
+            "description": "If provided, specifies the number of returned results"
           }
         ],
         "responses": {
@@ -9759,6 +10269,227 @@
     }
   },
   "definitions": {
+    "PaginatedBackupPolicy": {
+      "type": "object",
+      "properties": {
+        "current_page": {
+          "type": "integer",
+          "description": "The current page number"
+        },
+        "next_page": {
+          "type": "integer",
+          "description": "The next page number"
+        },
+        "next_page_url": {
+          "type": "string",
+          "description": "The next page of results"
+        },
+        "prev_page": {
+          "type": "integer",
+          "description": "The previous page number"
+        },
+        "prev_page_url": {
+          "type": "string",
+          "description": "The previous page of results"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of the backup policy"
+              },
+              "display_name": {
+                "type": "string",
+                "description": "The display name of the backup policy"
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the backup policy"
+              },
+              "target": {
+                "type": "string",
+                "enum": [
+                  "production",
+                  "development"
+                ],
+                "description": "Whether the policy is for production or development branches"
+              },
+              "retention_value": {
+                "type": "integer",
+                "description": "A number value for the retention period of the backup policy"
+              },
+              "retention_unit": {
+                "type": "string",
+                "description": "The unit for the retention period of the backup policy"
+              },
+              "frequency_value": {
+                "type": "integer",
+                "description": "A number value for the frequency of the backup policy"
+              },
+              "frequency_unit": {
+                "type": "string",
+                "description": "The unit for the frequency of the backup policy"
+              },
+              "schedule_time": {
+                "type": "string",
+                "description": "The time of day that the backup is scheduled, in HH:MM format"
+              },
+              "schedule_day": {
+                "type": "integer",
+                "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday"
+              },
+              "schedule_week": {
+                "type": "integer",
+                "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week"
+              },
+              "created_at": {
+                "type": "string",
+                "description": "When the backup policy was created"
+              },
+              "updated_at": {
+                "type": "string",
+                "description": "When the backup policy was last updated"
+              },
+              "last_ran_at": {
+                "type": "string",
+                "description": "When the backup was last run"
+              },
+              "next_run_at": {
+                "type": "string",
+                "description": "When the backup will next run"
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the policy is a required system backup"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "display_name",
+              "name",
+              "target",
+              "retention_value",
+              "retention_unit",
+              "frequency_value",
+              "frequency_unit",
+              "schedule_time",
+              "schedule_day",
+              "schedule_week",
+              "created_at",
+              "updated_at",
+              "last_ran_at",
+              "next_run_at",
+              "required"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "current_page",
+        "next_page",
+        "next_page_url",
+        "prev_page",
+        "prev_page_url",
+        "data"
+      ]
+    },
+    "BackupPolicy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The ID of the backup policy"
+        },
+        "display_name": {
+          "type": "string",
+          "description": "The display name of the backup policy"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the backup policy"
+        },
+        "target": {
+          "type": "string",
+          "enum": [
+            "production",
+            "development"
+          ],
+          "description": "Whether the policy is for production or development branches"
+        },
+        "retention_value": {
+          "type": "integer",
+          "description": "A number value for the retention period of the backup policy"
+        },
+        "retention_unit": {
+          "type": "string",
+          "description": "The unit for the retention period of the backup policy"
+        },
+        "frequency_value": {
+          "type": "integer",
+          "description": "A number value for the frequency of the backup policy"
+        },
+        "frequency_unit": {
+          "type": "string",
+          "description": "The unit for the frequency of the backup policy"
+        },
+        "schedule_time": {
+          "type": "string",
+          "description": "The time of day that the backup is scheduled, in HH:MM format"
+        },
+        "schedule_day": {
+          "type": "integer",
+          "description": "Day of the week that the backup is scheduled. 0 is Sunday, 6 is Saturday"
+        },
+        "schedule_week": {
+          "type": "integer",
+          "description": "Week of the month that the backup is scheduled. 0 is the first week, 3 is the fourth week"
+        },
+        "created_at": {
+          "type": "string",
+          "description": "When the backup policy was created"
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "When the backup policy was last updated"
+        },
+        "last_ran_at": {
+          "type": "string",
+          "description": "When the backup was last run"
+        },
+        "next_run_at": {
+          "type": "string",
+          "description": "When the backup will next run"
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether the policy is a required system backup"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "display_name",
+        "name",
+        "target",
+        "retention_value",
+        "retention_unit",
+        "frequency_value",
+        "frequency_unit",
+        "schedule_time",
+        "schedule_day",
+        "schedule_week",
+        "created_at",
+        "updated_at",
+        "last_ran_at",
+        "next_run_at",
+        "required"
+      ]
+    },
     "PaginatedBackup": {
       "type": "object",
       "properties": {
@@ -9917,6 +10648,10 @@
                     "type": "string",
                     "description": "The ID of the backup policy"
                   },
+                  "display_name": {
+                    "type": "string",
+                    "description": "The display name of the backup policy"
+                  },
                   "name": {
                     "type": "string",
                     "description": "The name of the backup policy"
@@ -9981,6 +10716,7 @@
                 "additionalProperties": false,
                 "required": [
                   "id",
+                  "display_name",
                   "name",
                   "target",
                   "retention_value",
@@ -10237,6 +10973,10 @@
               "type": "string",
               "description": "The ID of the backup policy"
             },
+            "display_name": {
+              "type": "string",
+              "description": "The display name of the backup policy"
+            },
             "name": {
               "type": "string",
               "description": "The name of the backup policy"
@@ -10301,6 +11041,7 @@
           "additionalProperties": false,
           "required": [
             "id",
+            "display_name",
             "name",
             "target",
             "retention_value",
@@ -23753,6 +24494,10 @@
   ],
   "tags": [
     {
+      "name": "BackupPolicies",
+      "description": "          Resources for managing database backup policies.\n"
+    },
+    {
       "name": "Backups",
       "description": "          Resources for managing database branch backups.\n"
     },
@@ -23847,6 +24592,10 @@
     {
       "name": "Traffic budgets",
       "description": "          Resources for managing traffic budgets.\n"
+    },
+    {
+      "name": "Traffic rules",
+      "description": "          Resources for managing traffic rules for a traffic budget.\n"
     },
     {
       "name": "Users",
