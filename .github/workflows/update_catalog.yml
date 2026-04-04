@@ -9,7 +9,7 @@ on:
 env:
   FORCE_COLOR: "1"
   # renovate: datasource=pypi depName=llm
-  LLM_VERSION: 0.28
+  LLM_VERSION: 0.29
   # renovate: datasource=pypi depName=llm-github-models
   LLM_GITHUB_MODELS_VERSION: 0.18.0
   # renovate: datasource=pypi depName=uv
