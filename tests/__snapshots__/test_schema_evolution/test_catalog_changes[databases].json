@@ -592,7 +592,7 @@
         ]
       },
       "automatic_migrations": {
-        "description": "Whether to automatically manage Rails migrations during deploy requests",
+        "description": "Whether to automatically manage Rails migrations during deploy requests.",
         "type": [
           "boolean",
           "null"
@@ -797,14 +797,14 @@
         ]
       },
       "migration_framework": {
-        "description": "Framework used for applying migrations",
+        "description": "Framework used for applying migrations.",
         "type": [
           "string",
           "null"
         ]
       },
       "migration_table_name": {
-        "description": "Table name to use for copying schema migration data",
+        "description": "Table name to use for copying schema migration data.",
         "type": [
           "string",
           "null"
@@ -1009,12 +1009,10 @@
       "open_schema_recommendations_count",
       "development_branches_count",
       "production_branches_count",
-      "issues_count",
       "multiple_admins_required_for_deletion",
       "ready",
       "at_backup_restore_branches_limit",
       "at_development_branch_usage_limit",
-      "data_import",
       "region",
       "html_url",
       "name",
@@ -1031,14 +1029,11 @@
       "config_change_queued",
       "allow_data_branching",
       "foreign_keys_enabled",
-      "automatic_migrations",
       "restrict_branch_region",
       "insights_raw_queries",
       "plan",
       "insights_enabled",
       "production_branch_web_console",
-      "migration_table_name",
-      "migration_framework",
       "created_at",
       "updated_at",
       "schema_last_updated_at",
