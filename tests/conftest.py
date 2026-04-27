@@ -11,7 +11,6 @@ XFAIL_NULLABLE = pytest.mark.xfail(reason="Null not documented in OpenAPI spec")
 XFAIL_SCHEMA_MISMATCH = pytest.mark.xfail(reason="Schema mismatch against OpenAPI spec")
 
 SCHEMA_MISMATCH = {
-    "test_tap_stream_record_matches_stream_schema[databases]",
     "test_tap_stream_record_matches_stream_schema[organizations]",
 }
 NULLABLE = {

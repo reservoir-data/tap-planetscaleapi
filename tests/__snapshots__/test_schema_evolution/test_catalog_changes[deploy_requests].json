@@ -729,6 +729,28 @@
     {
       "breadcrumb": [
         "properties",
+        "deployment",
+        "properties",
+        "queue_paused"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
+        "queue_pause_reason"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "num_comments"
       ],
       "metadata": {
@@ -1119,7 +1141,7 @@
             ]
           },
           "deploy_check_errors": {
-            "description": "Deploy check errors for the deployment",
+            "description": "Deploy check errors for the deployment.",
             "type": [
               "string",
               "null"
@@ -1602,7 +1624,7 @@
             ]
           },
           "locked_table_name": {
-            "description": "The name of he table that is locked by the deployment",
+            "description": "The name of the table that is locked by the deployment.",
             "type": [
               "string",
               "null"
@@ -1633,6 +1655,20 @@
             },
             "type": [
               "array",
+              "null"
+            ]
+          },
+          "queue_pause_reason": {
+            "description": "A human-readable reason the deploy queue is paused, if known",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "queue_paused": {
+            "description": "Whether the deploy queue for the target branch is currently paused",
+            "type": [
+              "boolean",
               "null"
             ]
           },
@@ -1700,16 +1736,10 @@
             ]
           },
           "throttler_configurations": {
-            "description": "Deployment throttling configurations",
-            "items": {
-              "additionalProperties": true,
-              "type": [
-                "object",
-                "null"
-              ]
-            },
+            "additionalProperties": true,
+            "description": "Deployment throttling configurations.",
             "type": [
-              "array",
+              "object",
               "null"
             ]
           },
@@ -1728,7 +1758,6 @@
           "created_at",
           "cutover_at",
           "cutover_expiring",
-          "deploy_check_errors",
           "finished_at",
           "queued_at",
           "ready_to_cutover_at",
@@ -1745,16 +1774,13 @@
           "lint_errors",
           "sequential_diff_dependencies",
           "lookup_vindex_operations",
-          "throttler_configurations",
           "deployment_revert_request",
-          "actor",
-          "cutover_actor",
-          "cancelled_actor",
           "schema_last_updated_at",
           "table_locked",
-          "locked_table_name",
           "instant_ddl",
-          "instant_ddl_eligible"
+          "instant_ddl_eligible",
+          "queue_paused",
+          "queue_pause_reason"
         ],
         "type": [
           "object",
@@ -1850,11 +1876,9 @@
       "id",
       "number",
       "actor",
-      "closed_by",
       "branch",
       "branch_id",
       "branch_deleted",
-      "branch_deleted_by",
       "branch_deleted_at",
       "into_branch",
       "into_branch_sharded",

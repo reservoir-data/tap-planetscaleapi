@@ -976,10 +976,7 @@
       "protected",
       "required",
       "restored_branches",
-      "actor",
-      "backup_policy",
-      "schema_snapshot",
-      "database_branch"
+      "actor"
     ],
     "type": [
       "object",
