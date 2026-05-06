@@ -12981,6 +12981,14 @@
                   "current_default": {
                     "type": "boolean",
                     "description": "True if the region is the default for new branch creation"
+                  },
+                  "mysql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports MySQL/Vitess databases"
+                  },
+                  "postgresql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports PostgreSQL databases"
                   }
                 },
                 "additionalProperties": false,
@@ -12992,7 +13000,9 @@
                   "display_name",
                   "location",
                   "slug",
-                  "current_default"
+                  "current_default",
+                  "mysql_supported",
+                  "postgresql_supported"
                 ]
               },
               "parent_branch": {
@@ -13278,6 +13288,14 @@
             "current_default": {
               "type": "boolean",
               "description": "True if the region is the default for new branch creation"
+            },
+            "mysql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports MySQL/Vitess databases"
+            },
+            "postgresql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports PostgreSQL databases"
             }
           },
           "additionalProperties": false,
@@ -13289,7 +13307,9 @@
             "display_name",
             "location",
             "slug",
-            "current_default"
+            "current_default",
+            "mysql_supported",
+            "postgresql_supported"
           ]
         },
         "parent_branch": {
@@ -14361,6 +14381,14 @@
                   "current_default": {
                     "type": "boolean",
                     "description": "True if the region is the default for new branch creation"
+                  },
+                  "mysql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports MySQL/Vitess databases"
+                  },
+                  "postgresql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports PostgreSQL databases"
                   }
                 },
                 "additionalProperties": false,
@@ -14372,7 +14400,9 @@
                   "display_name",
                   "location",
                   "slug",
-                  "current_default"
+                  "current_default",
+                  "mysql_supported",
+                  "postgresql_supported"
                 ]
               },
               "username": {
@@ -14601,6 +14631,14 @@
             "current_default": {
               "type": "boolean",
               "description": "True if the region is the default for new branch creation"
+            },
+            "mysql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports MySQL/Vitess databases"
+            },
+            "postgresql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports PostgreSQL databases"
             }
           },
           "additionalProperties": false,
@@ -14612,7 +14650,9 @@
             "display_name",
             "location",
             "slug",
-            "current_default"
+            "current_default",
+            "mysql_supported",
+            "postgresql_supported"
           ]
         },
         "username": {
@@ -15033,6 +15073,14 @@
                   "current_default": {
                     "type": "boolean",
                     "description": "True if the region is the default for new branch creation"
+                  },
+                  "mysql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports MySQL/Vitess databases"
+                  },
+                  "postgresql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports PostgreSQL databases"
                   }
                 },
                 "additionalProperties": false,
@@ -15044,7 +15092,9 @@
                   "display_name",
                   "location",
                   "slug",
-                  "current_default"
+                  "current_default",
+                  "mysql_supported",
+                  "postgresql_supported"
                 ]
               },
               "html_url": {
@@ -15361,6 +15411,14 @@
             "current_default": {
               "type": "boolean",
               "description": "True if the region is the default for new branch creation"
+            },
+            "mysql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports MySQL/Vitess databases"
+            },
+            "postgresql_supported": {
+              "type": "boolean",
+              "description": "Whether the region supports PostgreSQL databases"
             }
           },
           "additionalProperties": false,
@@ -15372,7 +15430,9 @@
             "display_name",
             "location",
             "slug",
-            "current_default"
+            "current_default",
+            "mysql_supported",
+            "postgresql_supported"
           ]
         },
         "html_url": {
@@ -15599,6 +15659,14 @@
               "current_default": {
                 "type": "boolean",
                 "description": "True if the region is the default for new branch creation"
+              },
+              "mysql_supported": {
+                "type": "boolean",
+                "description": "Whether the region supports MySQL/Vitess databases"
+              },
+              "postgresql_supported": {
+                "type": "boolean",
+                "description": "Whether the region supports PostgreSQL databases"
               }
             },
             "additionalProperties": false,
@@ -15610,7 +15678,9 @@
               "display_name",
               "location",
               "slug",
-              "current_default"
+              "current_default",
+              "mysql_supported",
+              "postgresql_supported"
             ]
           }
         }
@@ -15737,6 +15807,14 @@
                   "current_default": {
                     "type": "boolean",
                     "description": "True if the region is the default for new branch creation"
+                  },
+                  "mysql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports MySQL/Vitess databases"
+                  },
+                  "postgresql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports PostgreSQL databases"
                   }
                 },
                 "additionalProperties": false,
@@ -15748,7 +15826,9 @@
                   "display_name",
                   "location",
                   "slug",
-                  "current_default"
+                  "current_default",
+                  "mysql_supported",
+                  "postgresql_supported"
                 ]
               }
             },
@@ -25258,6 +25338,14 @@
                         "current_default": {
                           "type": "boolean",
                           "description": "True if the region is the default for new branch creation"
+                        },
+                        "mysql_supported": {
+                          "type": "boolean",
+                          "description": "Whether the region supports MySQL/Vitess databases"
+                        },
+                        "postgresql_supported": {
+                          "type": "boolean",
+                          "description": "Whether the region supports PostgreSQL databases"
                         }
                       },
                       "additionalProperties": false,
@@ -25269,7 +25357,9 @@
                         "display_name",
                         "location",
                         "slug",
-                        "current_default"
+                        "current_default",
+                        "mysql_supported",
+                        "postgresql_supported"
                       ]
                     },
                     "username": {
@@ -25647,6 +25737,14 @@
                   "current_default": {
                     "type": "boolean",
                     "description": "True if the region is the default for new branch creation"
+                  },
+                  "mysql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports MySQL/Vitess databases"
+                  },
+                  "postgresql_supported": {
+                    "type": "boolean",
+                    "description": "Whether the region supports PostgreSQL databases"
                   }
                 },
                 "additionalProperties": false,
@@ -25658,7 +25756,9 @@
                   "display_name",
                   "location",
                   "slug",
-                  "current_default"
+                  "current_default",
+                  "mysql_supported",
+                  "postgresql_supported"
                 ]
               },
               "username": {

@@ -76,6 +76,24 @@
       }
     },
     {
+      "breadcrumb": [
+        "properties",
+        "mysql_supported"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "postgresql_supported"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
       "breadcrumb": [],
       "metadata": {
         "inclusion": "available",
@@ -126,6 +144,20 @@
           "null"
         ]
       },
+      "mysql_supported": {
+        "description": "Whether the region supports MySQL/Vitess databases",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "postgresql_supported": {
+        "description": "Whether the region supports PostgreSQL databases",
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
       "provider": {
         "description": "Provider for the region (ex. AWS)",
         "type": [
@@ -159,7 +191,9 @@
       "display_name",
       "location",
       "slug",
-      "current_default"
+      "current_default",
+      "mysql_supported",
+      "postgresql_supported"
     ],
     "type": [
       "object",
