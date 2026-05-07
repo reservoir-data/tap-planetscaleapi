@@ -518,10 +518,8 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "actor": {
-        "additionalProperties": false,
         "properties": {
           "avatar_url": {
             "description": "The URL of the actor's avatar",
@@ -556,7 +554,6 @@
         ]
       },
       "backup_policy": {
-        "additionalProperties": false,
         "properties": {
           "created_at": {
             "description": "When the backup policy was created",
@@ -709,7 +706,6 @@
         ]
       },
       "database_branch": {
-        "additionalProperties": false,
         "properties": {
           "created_at": {
             "description": "When the resource was created",
@@ -817,7 +813,6 @@
       },
       "restored_branches": {
         "items": {
-          "additionalProperties": false,
           "properties": {
             "created_at": {
               "description": "When the resource was created",
@@ -873,7 +868,6 @@
         ]
       },
       "schema_snapshot": {
-        "additionalProperties": false,
         "properties": {
           "created_at": {
             "description": "When the schema snapshot was created",
