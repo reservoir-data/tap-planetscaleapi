@@ -80,7 +80,6 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "display_name": {
         "description": "The name of the region",

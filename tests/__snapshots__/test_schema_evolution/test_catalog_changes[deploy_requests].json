@@ -834,10 +834,8 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "actor": {
-        "additionalProperties": false,
         "properties": {
           "avatar_url": {
             "description": "The URL of the actor's avatar",
@@ -900,7 +898,6 @@
         ]
       },
       "branch_deleted_by": {
-        "additionalProperties": false,
         "properties": {
           "avatar_url": {
             "description": "The URL of the actor's avatar",
@@ -949,7 +946,6 @@
         ]
       },
       "closed_by": {
-        "additionalProperties": false,
         "properties": {
           "avatar_url": {
             "description": "The URL of the actor's avatar",
@@ -998,10 +994,8 @@
         ]
       },
       "deployment": {
-        "additionalProperties": false,
         "properties": {
           "actor": {
-            "additionalProperties": false,
             "properties": {
               "avatar_url": {
                 "description": "The URL of the actor's avatar",
@@ -1050,7 +1044,6 @@
             ]
           },
           "cancelled_actor": {
-            "additionalProperties": false,
             "properties": {
               "avatar_url": {
                 "description": "The URL of the actor's avatar",
@@ -1092,7 +1085,6 @@
             ]
           },
           "cutover_actor": {
-            "additionalProperties": false,
             "properties": {
               "avatar_url": {
                 "description": "The URL of the actor's avatar",
@@ -1149,7 +1141,6 @@
           },
           "deploy_operation_summaries": {
             "items": {
-              "additionalProperties": false,
               "properties": {
                 "can_drop_data": {
                   "description": "Whether or not the deploy operation summary is capable of dropping data",
@@ -1209,7 +1200,6 @@
                 },
                 "operations": {
                   "items": {
-                    "additionalProperties": false,
                     "properties": {
                       "eta_seconds": {
                         "description": "The estimated seconds until completion for the deploy operation",
@@ -1382,7 +1372,6 @@
           },
           "deploy_operations": {
             "items": {
-              "additionalProperties": false,
               "properties": {
                 "can_drop_data": {
                   "description": "Whether or not the deploy operation is capable of dropping data",

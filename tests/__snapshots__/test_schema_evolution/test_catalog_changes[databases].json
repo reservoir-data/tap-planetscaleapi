@@ -590,7 +590,6 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "allow_data_branching": {
         "description": "Whether seeding branches with data is enabled for all branches",
@@ -656,10 +655,8 @@
         ]
       },
       "data_import": {
-        "additionalProperties": false,
         "properties": {
           "data_source": {
-            "additionalProperties": false,
             "properties": {
               "database": {
                 "description": "Database name of the data source",
@@ -882,7 +879,6 @@
         ]
       },
       "region": {
-        "additionalProperties": false,
         "properties": {
           "current_default": {
             "description": "True if the region is the default for new branch creation",

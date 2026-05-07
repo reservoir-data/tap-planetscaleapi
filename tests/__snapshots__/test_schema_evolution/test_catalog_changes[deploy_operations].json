@@ -188,7 +188,6 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "can_drop_data": {
         "description": "Whether or not the deploy operation is capable of dropping data",

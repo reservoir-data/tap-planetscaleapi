@@ -197,7 +197,6 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "billing_email": {
         "description": "The billing email of the organization",

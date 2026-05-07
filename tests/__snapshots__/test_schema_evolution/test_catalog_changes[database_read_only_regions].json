@@ -232,10 +232,8 @@
   ],
   "replication_method": "FULL_TABLE",
   "schema": {
-    "additionalProperties": false,
     "properties": {
       "actor": {
-        "additionalProperties": false,
         "properties": {
           "avatar_url": {
             "description": "The URL of the actor's avatar",
@@ -305,7 +303,6 @@
         ]
       },
       "region": {
-        "additionalProperties": false,
         "properties": {
           "current_default": {
             "description": "True if the region is the default for new branch creation",
