@@ -339,6 +339,17 @@
         "properties",
         "deployment",
         "properties",
+        "force_cutover_requested_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deployment",
+        "properties",
         "queued_at"
       ],
       "metadata": {
@@ -1570,6 +1581,13 @@
               "null"
             ]
           },
+          "force_cutover_requested_at": {
+            "description": "When force cutover was triggered for the deployment",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "id": {
             "description": "The ID of the deployment",
             "type": [
@@ -1748,6 +1766,7 @@
           "cutover_at",
           "cutover_expiring",
           "finished_at",
+          "force_cutover_requested_at",
           "queued_at",
           "ready_to_cutover_at",
           "started_at",
