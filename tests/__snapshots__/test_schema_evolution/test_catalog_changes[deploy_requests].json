@@ -213,6 +213,15 @@
     {
       "breadcrumb": [
         "properties",
+        "into_branch_keyspace_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "approved"
       ],
       "metadata": {
@@ -1830,6 +1839,13 @@
           "null"
         ]
       },
+      "into_branch_keyspace_count": {
+        "description": "The number of keyspaces the branch the deploy request will be merged into has",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
       "into_branch_shard_count": {
         "description": "The number of shards the branch the deploy request will be merged into has",
         "type": [
@@ -1891,6 +1907,7 @@
       "into_branch",
       "into_branch_sharded",
       "into_branch_shard_count",
+      "into_branch_keyspace_count",
       "approved",
       "state",
       "deployment_state",

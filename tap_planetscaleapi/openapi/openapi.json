@@ -4415,6 +4415,18 @@
             "in": "query",
             "default": 25,
             "description": "If provided, specifies the number of returned results"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "in": "query",
+            "description": "Filter roles by status"
+          },
+          {
+            "name": "q",
+            "type": "string",
+            "in": "query",
+            "description": "Search roles by name or username"
           }
         ],
         "responses": {
@@ -5597,7 +5609,8 @@
                 "kind": {
                   "type": "string",
                   "enum": [
-                    "match"
+                    "match",
+                    "each"
                   ],
                   "description": "Kind of rule"
                 },
@@ -5614,7 +5627,7 @@
                   "items": {
                     "type": "string"
                   },
-                  "description": "Optional array of tags for this rule"
+                  "description": "Optional array of tags for this rule. Each rules take exactly one tag."
                 }
               }
             }
@@ -12947,6 +12960,10 @@
                 "type": "integer",
                 "description": "The number of shards in the branch"
               },
+              "keyspace_count": {
+                "type": "integer",
+                "description": "The number of keyspaces in the branch"
+              },
               "stale_schema": {
                 "type": "boolean",
                 "description": "Whether or not the branch has a stale schema"
@@ -13123,6 +13140,7 @@
               "safe_migrations",
               "sharded",
               "shard_count",
+              "keyspace_count",
               "stale_schema",
               "actor",
               "restored_from_branch",
@@ -13257,6 +13275,10 @@
         "shard_count": {
           "type": "integer",
           "description": "The number of shards in the branch"
+        },
+        "keyspace_count": {
+          "type": "integer",
+          "description": "The number of keyspaces in the branch"
         },
         "stale_schema": {
           "type": "boolean",
@@ -13434,6 +13456,7 @@
         "safe_migrations",
         "sharded",
         "shard_count",
+        "keyspace_count",
         "stale_schema",
         "actor",
         "restored_from_branch",
@@ -13614,9 +13637,14 @@
           "type": "boolean",
           "description": "The internal state of the extension"
         },
-        "shared_preload_allowed": {
-          "type": "boolean",
-          "description": "Whether the extension can be added to shared_preload_libraries"
+        "loader": {
+          "type": "string",
+          "enum": [
+            "shared_preload_libraries",
+            "session_preload_libraries",
+            "create_extension"
+          ],
+          "description": "How the extension is loaded"
         },
         "url": {
           "type": "string",
@@ -13788,7 +13816,7 @@
         "name",
         "description",
         "internal",
-        "shared_preload_allowed",
+        "loader",
         "url",
         "available",
         "unavailable_reason",
@@ -20218,7 +20246,8 @@
                     "kind": {
                       "type": "string",
                       "enum": [
-                        "match"
+                        "match",
+                        "each"
                       ],
                       "description": "The kind of rule"
                     },
@@ -20422,7 +20451,8 @@
               "kind": {
                 "type": "string",
                 "enum": [
-                  "match"
+                  "match",
+                  "each"
                 ],
                 "description": "The kind of rule"
               },
@@ -20545,7 +20575,8 @@
         "kind": {
           "type": "string",
           "enum": [
-            "match"
+            "match",
+            "each"
           ],
           "description": "The kind of rule"
         },
@@ -22194,6 +22225,10 @@
                 "type": "integer",
                 "description": "The number of shards the branch the deploy request will be merged into has"
               },
+              "into_branch_keyspace_count": {
+                "type": "integer",
+                "description": "The number of keyspaces the branch the deploy request will be merged into has"
+              },
               "approved": {
                 "type": "boolean",
                 "description": "Whether or not the deploy request is approved"
@@ -22848,6 +22883,7 @@
               "into_branch",
               "into_branch_sharded",
               "into_branch_shard_count",
+              "into_branch_keyspace_count",
               "approved",
               "state",
               "deployment_state",
@@ -22981,6 +23017,10 @@
         "into_branch_shard_count": {
           "type": "integer",
           "description": "The number of shards the branch the deploy request will be merged into has"
+        },
+        "into_branch_keyspace_count": {
+          "type": "integer",
+          "description": "The number of keyspaces the branch the deploy request will be merged into has"
         },
         "approved": {
           "type": "boolean",
@@ -23636,6 +23676,7 @@
         "into_branch",
         "into_branch_sharded",
         "into_branch_shard_count",
+        "into_branch_keyspace_count",
         "approved",
         "state",
         "deployment_state",
@@ -25261,6 +25302,10 @@
                 "type": "string",
                 "description": "The name of the billable item"
               },
+              "cloudflare_billed": {
+                "type": "boolean",
+                "description": "Whether the line item is billed through Cloudflare"
+              },
               "database_id": {
                 "type": "string",
                 "description": "The ID for the billed database"
@@ -25308,6 +25353,7 @@
               "subtotal",
               "description",
               "metric_name",
+              "cloudflare_billed",
               "database_id",
               "database_name",
               "resource"
