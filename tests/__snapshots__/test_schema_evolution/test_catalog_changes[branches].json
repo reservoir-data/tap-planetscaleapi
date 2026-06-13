@@ -213,6 +213,15 @@
     {
       "breadcrumb": [
         "properties",
+        "keyspace_count"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "stale_schema"
       ],
       "metadata": {
@@ -619,6 +628,13 @@
           "null"
         ]
       },
+      "keyspace_count": {
+        "description": "The number of keyspaces in the branch",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
       "kind": {
         "description": "The kind of branch",
         "type": [
@@ -942,6 +958,7 @@
       "safe_migrations",
       "sharded",
       "shard_count",
+      "keyspace_count",
       "stale_schema",
       "actor",
       "restored_from_branch",
