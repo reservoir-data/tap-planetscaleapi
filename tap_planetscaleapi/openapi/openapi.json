@@ -267,6 +267,12 @@
             "type": "string",
             "in": "query",
             "description": "The region slug to get rates for. If not specified, uses the organization's default region."
+          },
+          {
+            "name": "database",
+            "type": "string",
+            "in": "query",
+            "description": "The database name to resolve rates for. When specified, database-level custom rates take precedence over organization rates."
           }
         ],
         "responses": {
@@ -3532,6 +3538,18 @@
             "type": "string",
             "in": "query",
             "description": "A read-only region of the database branch. If present, the password results will be filtered to only those in the region"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "in": "query",
+            "description": "Filter passwords by status"
+          },
+          {
+            "name": "q",
+            "type": "string",
+            "in": "query",
+            "description": "Search passwords by name"
           },
           {
             "name": "page",
@@ -11542,6 +11560,10 @@
                 "type": "integer",
                 "description": "Size of the PVC used for the backup"
               },
+              "uncompressed_size": {
+                "type": "integer",
+                "description": "The uncompressed (logical) size of the backup in bytes"
+              },
               "protected": {
                 "type": "boolean",
                 "description": "Whether or not the backup is protected from deletion"
@@ -11792,6 +11814,7 @@
               "completed_at",
               "deleted_at",
               "pvc_size",
+              "uncompressed_size",
               "protected",
               "required",
               "restored_branches",
@@ -11872,6 +11895,10 @@
         "pvc_size": {
           "type": "integer",
           "description": "Size of the PVC used for the backup"
+        },
+        "uncompressed_size": {
+          "type": "integer",
+          "description": "The uncompressed (logical) size of the backup in bytes"
         },
         "protected": {
           "type": "boolean",
@@ -12123,6 +12150,7 @@
         "completed_at",
         "deleted_at",
         "pvc_size",
+        "uncompressed_size",
         "protected",
         "required",
         "restored_branches",
@@ -16534,6 +16562,10 @@
                 "type": "boolean",
                 "description": "Whether the OAuth application is limited to authorizing a single organization"
               },
+              "requires_org_scope": {
+                "type": "boolean",
+                "description": "Whether the OAuth application requires at least one organization to be authorized"
+              },
               "scopes_by_resource": {
                 "type": "object",
                 "additionalProperties": true,
@@ -16558,6 +16590,7 @@
               "tokens",
               "dcr",
               "single_org_authorization",
+              "requires_org_scope",
               "scopes_by_resource",
               "all_scopes_by_resource"
             ]
@@ -16625,6 +16658,10 @@
           "type": "boolean",
           "description": "Whether the OAuth application is limited to authorizing a single organization"
         },
+        "requires_org_scope": {
+          "type": "boolean",
+          "description": "Whether the OAuth application requires at least one organization to be authorized"
+        },
         "scopes_by_resource": {
           "type": "object",
           "additionalProperties": true,
@@ -16649,6 +16686,7 @@
         "tokens",
         "dcr",
         "single_org_authorization",
+        "requires_org_scope",
         "scopes_by_resource",
         "all_scopes_by_resource"
       ]
