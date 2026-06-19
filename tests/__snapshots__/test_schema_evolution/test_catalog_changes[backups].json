@@ -114,6 +114,15 @@
     {
       "breadcrumb": [
         "properties",
+        "uncompressed_size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "protected"
       ],
       "metadata": {
@@ -946,6 +955,13 @@
           "null"
         ]
       },
+      "uncompressed_size": {
+        "description": "The uncompressed (logical) size of the backup in bytes",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
       "updated_at": {
         "description": "When the backup was last updated",
         "type": [
@@ -967,6 +983,7 @@
       "completed_at",
       "deleted_at",
       "pvc_size",
+      "uncompressed_size",
       "protected",
       "required",
       "restored_branches",
