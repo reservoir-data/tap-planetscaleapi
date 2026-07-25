@@ -47,13 +47,13 @@ class TapPlanetScaleAPI(Tap):
             streams.DatabaseReadOnlyRegionsStream(tap=self),
             streams.DatabaseRegionsStream(tap=self),
             streams.BranchesStream(tap=self),
-            # streams.BranchSchemaStream(tap=self),  # noqa: ERA001
+            # streams.BranchSchemaStream(tap=self),  # ruff: ignore[commented-out-code]
             streams.BackupsStream(tap=self),
             streams.PasswordsStream(tap=self),
             streams.DeployRequestsStream(tap=self),
             streams.DeployOperationsStream(tap=self),
             streams.DeployRequestReviewsStreams(tap=self),
-            # streams.OAuthApplicationsStream(tap=self),  # noqa: ERA001
+            # streams.OAuthApplicationsStream(tap=self),  # ruff: ignore[commented-out-code]
             streams.RegionsStream(tap=self),
         ]
 

@@ -49,7 +49,7 @@ class PlanetScaleOpenAPISource(OpenAPISchema[StreamKey]):
 
     @override
     def fetch_schema(self, key: StreamKey) -> dict[str, Any]:
-        from tap_planetscaleapi import streams  # noqa: PLC0415
+        from tap_planetscaleapi import streams  # ruff: ignore[import-outside-top-level]
 
         schema = super().fetch_schema(key)["properties"]["data"]["items"]
         if key.path == streams.BackupsStream.spec_path:
