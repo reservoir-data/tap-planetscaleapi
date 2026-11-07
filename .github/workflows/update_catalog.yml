@@ -18,7 +18,7 @@ env:
 jobs:
   update_openapi_specification:
     name: Update Catalog
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: write  # Required by peter-evans/create-pull-request
       models: read  # Required by llm-github-models

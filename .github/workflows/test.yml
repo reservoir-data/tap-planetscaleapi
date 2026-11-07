@@ -40,7 +40,7 @@ env:
 jobs:
   pytest:
     name: CI
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     strategy:
